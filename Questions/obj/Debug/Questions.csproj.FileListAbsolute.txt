@@ -1,0 +1,6 @@
+c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\bin\Debug\Questions.exe.config
+c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\bin\Debug\Questions.exe
+c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\bin\Debug\Questions.pdb
+c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\obj\Debug\Questions.exe
+c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\obj\Debug\Questions.pdb
+C:\Users\sumit\Documents\Visual Studio 2015\Projects\Questions\Questions\obj\Debug\Questions.csprojResolveAssemblyReference.cache

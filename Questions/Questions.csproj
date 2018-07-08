@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C51FFA1D-0C5A-4391-A279-FD0AC43AC188}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Questions</RootNamespace>
+    <AssemblyName>Questions</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCI\DeleteMiddleNode.cs" />
+    <Compile Include="CCI\ListLoop.cs" />
+    <Compile Include="CCI\PartitionList.cs" />
+    <Compile Include="CCI\SumOfLists.cs" />
+    <Compile Include="CodeFlights\FirstDuplicate.cs" />
+    <Compile Include="CodeFlights\FirstNotRepeatingCharacter.cs" />
+    <Compile Include="CodeFlights\GroupingDishes.cs" />
+    <Compile Include="CodeFlights\RemoveKFromList.cs" />
+    <Compile Include="IK\05102018.cs" />
+    <Compile Include="IK\Adhoc.cs" />
+    <Compile Include="IK\Concurrency\ConditionVariable.cs" />
+    <Compile Include="IK\Concurrency\ObjectPool.cs" />
+    <Compile Include="IK\Concurrency\ProduceConsumerQueue.cs" />
+    <Compile Include="IK\DP.cs" />
+    <Compile Include="IK\Graphs.cs" />
+    <Compile Include="IK\ObjectModelling.cs" />
+    <Compile Include="IK\Patterns\Decorator.cs" />
+    <Compile Include="IK\Patterns\State.cs" />
+    <Compile Include="IK\PrintSortedNumbers.cs" />
+    <Compile Include="IK\RankK.cs" />
+    <Compile Include="IK\Concurrency\ReaderWriterLock.cs" />
+    <Compile Include="IK\Recursion.cs" />
+    <Compile Include="IK\Sorting.cs" />
+    <Compile Include="IK\StreamOfInt.cs" />
+    <Compile Include="IK\Strings.cs" />
+    <Compile Include="IK\Trees.cs" />
+    <Compile Include="IQuestion.cs" />
+    <Compile Include="LeetCode\AddTwoNumbers.cs" />
+    <Compile Include="LeetCode\ArrayIntersect.cs" />
+    <Compile Include="LeetCode\BuildBST.cs" />
+    <Compile Include="LeetCode\HappyNumber.cs" />
+    <Compile Include="LeetCode\Heaters.cs" />
+    <Compile Include="LeetCode\LargestPalindrome.cs" />
+    <Compile Include="LeetCode\MaxDepthOfTree.cs" />
+    <Compile Include="LeetCode\Palindrome.cs" />
+    <Compile Include="LeetCode\PascalsTriangle.cs" />
+    <Compile Include="LeetCode\Primes.cs" />
+    <Compile Include="LeetCode\ReverseInteger.cs" />
+    <Compile Include="LeetCode\ReverseString.cs" />
+    <Compile Include="LeetCode\Romans.cs" />
+    <Compile Include="Models\ListNode.cs" />
+    <Compile Include="Models\TreeNode.cs" />
+    <Compile Include="Practice\Bitwise.cs" />
+    <Compile Include="Practice\ElementInCircularRotated.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
