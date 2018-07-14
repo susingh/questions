@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,11 +53,14 @@
     <Compile Include="CodeFlights\FirstNotRepeatingCharacter.cs" />
     <Compile Include="CodeFlights\GroupingDishes.cs" />
     <Compile Include="CodeFlights\RemoveKFromList.cs" />
+    <Compile Include="DescendingOrder.cs" />
     <Compile Include="IK\05102018.cs" />
     <Compile Include="IK\Adhoc.cs" />
+    <Compile Include="IK\Concurrency\BoundedHashset.cs" />
     <Compile Include="IK\Concurrency\ConditionVariable.cs" />
     <Compile Include="IK\Concurrency\ObjectPool.cs" />
     <Compile Include="IK\Concurrency\ProduceConsumerQueue.cs" />
+    <Compile Include="IK\Concurrency\ThreadPool.cs" />
     <Compile Include="IK\DP.cs" />
     <Compile Include="IK\Graphs.cs" />
     <Compile Include="IK\ObjectModelling.cs" />
@@ -65,7 +70,13 @@
     <Compile Include="IK\RankK.cs" />
     <Compile Include="IK\Concurrency\ReaderWriterLock.cs" />
     <Compile Include="IK\Recursion.cs" />
-    <Compile Include="IK\Sorting.cs" />
+    <Compile Include="IK\Sorting\DutchFlag.cs" />
+    <Compile Include="IK\Sorting\GroupNumbers.cs" />
+    <Compile Include="IK\Sorting\MergeKSortedArrays.cs" />
+    <Compile Include="IK\Sorting\MergeSort.cs" />
+    <Compile Include="IK\Sorting\MergeTwoArrays.cs" />
+    <Compile Include="IK\Sorting\QuickSort.cs" />
+    <Compile Include="IK\Sorting\SortingDriver.cs" />
     <Compile Include="IK\StreamOfInt.cs" />
     <Compile Include="IK\Strings.cs" />
     <Compile Include="IK\Trees.cs" />
@@ -93,8 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="IK\Sorting\TopK.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

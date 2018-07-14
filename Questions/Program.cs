@@ -1,9 +1,5 @@
-﻿using Questions.CCI;
-using Questions.CodeFlights;
-using Questions.IK;
+﻿using Questions.IK;
 using Questions.IK.Concurrency;
-using Questions.LeetCode;
-using Questions.Practice;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -95,7 +91,7 @@ namespace Questions
             //var solution = new Bitwise();
             var solution
                 //= new ElementInCircularRotated();
-                // = new Sorting();
+                 = new SortingDriver();
                 // = new Recursion();
                 // = new Trees();
                 // = new DP();
@@ -104,7 +100,8 @@ namespace Questions
                 //= new Adhoc();
                 //= new ProducerConsumerDriver();
                 // = new ObjectPoolDriver();
-                = new ReaderWriterLockDriver();
+                // = new ReaderWriterLockDriver();
+                // = new BoundedHashSetDriver();
 
             solution.Run();
             Console.ReadKey();
