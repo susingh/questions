@@ -63,9 +63,13 @@
     <Compile Include="IK\Concurrency\ThreadPool.cs" />
     <Compile Include="IK\DP.cs" />
     <Compile Include="IK\Graphs.cs" />
+    <Compile Include="IK\LinkedList\BalancedParenthesis.cs" />
+    <Compile Include="IK\LinkedList\FindMedian.cs" />
     <Compile Include="IK\LinkedList\LinkedListDriver.cs" />
     <Compile Include="IK\LinkedList\LinkedListNode.cs" />
+    <Compile Include="IK\LinkedList\LLIntersection.cs" />
     <Compile Include="IK\LinkedList\LRUCache.cs" />
+    <Compile Include="IK\LinkedList\MaxNumberInSlidingWindow.cs" />
     <Compile Include="IK\LinkedList\ReverseLL.cs" />
     <Compile Include="IK\LinkedList\ZipLL.cs" />
     <Compile Include="IK\ObjectModelling.cs" />
