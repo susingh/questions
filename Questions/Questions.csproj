@@ -79,6 +79,9 @@
     <Compile Include="IK\RankK.cs" />
     <Compile Include="IK\Concurrency\ReaderWriterLock.cs" />
     <Compile Include="IK\Recursion.cs" />
+    <Compile Include="IK\Recursion\AllSubsets.cs" />
+    <Compile Include="IK\Recursion\Expressions.cs" />
+    <Compile Include="IK\Recursion\RecursionDriver.cs" />
     <Compile Include="IK\Sorting\DutchFlag.cs" />
     <Compile Include="IK\Sorting\GroupNumbers.cs" />
     <Compile Include="IK\Sorting\MergeKSortedArrays.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Questions.IK
 {
-    class Recursion : IQuestion
+    class RecursionOld : IQuestion
     {
         /*
          * Original permutation problem
@@ -489,31 +489,6 @@ namespace Questions.IK
             return count;
         }
        
-        static string[] generate_all_subsets(string s)
-        {
-            if (s == null)
-            {
-                return null;
-            }
-
-            char[] output = new char[s.Length];
-            return generate_all_subsets(s, 0, output, 0);
-        }
-
-        static string[] generate_all_subsets(string s, int i, char[] output, int j)
-        {
-            if (i == s.Length)
-            {
-                return new string[] { new string(output, 0, j) };
-            }
-
-            string[] without = generate_all_subsets(s, i + 1, output, j);
-            output[j] = s[i];
-            string[] with = generate_all_subsets(s, i + 1, output, j + 1);
-
-            return without.Concat(with).ToArray();
-        }
-
         public void Run()
         {
             //Permute(new char[] {'a', 'c', 'e', 'f' });
