@@ -83,6 +83,8 @@
     <Compile Include="IK\Recursion\Expressions.cs" />
     <Compile Include="IK\Recursion\NumberOfBSTs.cs" />
     <Compile Include="IK\Recursion\RecursionDriver.cs" />
+    <Compile Include="IK\Recursion\TargetSum.cs" />
+    <Compile Include="IK\Recursion\WellFormedBrackets.cs" />
     <Compile Include="IK\Sorting\DutchFlag.cs" />
     <Compile Include="IK\Sorting\GroupNumbers.cs" />
     <Compile Include="IK\Sorting\MergeKSortedArrays.cs" />
