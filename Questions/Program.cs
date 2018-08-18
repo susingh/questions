@@ -2,6 +2,7 @@
 using Questions.IK.Concurrency;
 using Questions.IK.Graph;
 using Questions.IK.Recursion;
+using Questions.IK.String;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -105,7 +106,9 @@ namespace Questions
                 // = new ObjectPoolDriver();
                 // = new ReaderWriterLockDriver();
                 // = new BoundedHashSetDriver();
-                = new GraphDriver();
+                // = new GraphDriver();
+                = new StringDriver();
+                
 
             solution.Run();
             Console.ReadKey();

@@ -1,21 +1,10 @@
-﻿using System;
+﻿using Questions.IK.String;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Questions.IK
 {
-
-    class TrieNode
-    {
-        public Dictionary<char, TrieNode> Children;
-        public bool isEow;
-
-        public TrieNode()
-        {
-            Children = new Dictionary<char, TrieNode>();
-        }
-    }
-
     class Strings : IQuestion
     {
         bool SubstringSearch(string s, string p)
@@ -117,135 +106,11 @@ namespace Questions.IK
             curr.isEow = true;
         }
 
-        static string LRS(string iString)
-        {
-            //return LRSBF(iString);
-            return LRS_SuffixTrees(iString);
-        }
-
-        static string LRSBF(string iString)
-        {
-            char[] arr = iString.ToCharArray();
-
-            string longestSubstring = string.Empty;
-            int longLength = 0;
-
-            Dictionary<string, int> set = new Dictionary<string, int>();
-
-            for (int i = 0; i < arr.Length; i++)
-            {
-                for (int j = i; j < arr.Length; j++)
-                {
-                    string substring = GetString(arr, i, j);
-                    int length = j - i + 1;
-
-                    if (set.ContainsKey(substring))
-                    {
-                        if (length > longLength)
-                        {
-                            longLength = length;
-                            longestSubstring = substring;
-                        }
-
-                        set[substring] = set[substring] + 1;
-                    }
-                    else
-                    {
-                        set[substring] = 1;
-                    }
-
-                }
-            }
-
-            return longestSubstring;
-        }
-        static string GetString(char[] arr, int start, int end)
-        {
-            return new string(arr, start, end - start + 1);
-        }
-
-        static string LRS_SuffixTrees(string word)
-        {
-            TrieNode root = BuildTree(word);
-
-
-            char[] arr = new char[word.Length + 1];
-            List<string> suffixes = new List<string>();
-
-            foreach (var child in root.Children)
-            {
-                arr[0] = child.Key;
-                dfs(child.Value, arr, 1, suffixes);
-            }
-
-            int lrs_length = 0;
-            string lrs = string.Empty;
-            foreach (var item in suffixes)
-            {
-                if (item.Length > lrs_length)
-                {
-                    lrs = item;
-                    lrs_length = item.Length;
-                }
-            }
-
-            return lrs;
-        }
-
-        private static void dfs(TrieNode node, char[] arr, int i, List<string> suffixes)
-        {
-            TrieNode curr = node;
-            if (curr.Children.Count == 0)
-            {
-                return;
-            }
-
-            if (curr.Children.Count >= 2)
-            {
-                suffixes.Add(new string(arr, 0, i));
-            }
-
-            foreach(var child in curr.Children)
-            {
-                arr[i] = child.Key;
-                dfs(child.Value, arr, i + 1, suffixes);
-            }
-        }
-
-        static void InsertIntoTrie(string word, int start, TrieNode root)
-        {
-            TrieNode curr = root;
-            for (int i = start; i < word.Length; i++)
-            {
-                if (!curr.Children.ContainsKey(word[i]))
-                {
-                    TrieNode node = new TrieNode();
-                    curr.Children[word[i]] = node;
-                }
-
-                curr = curr.Children[word[i]];
-            }
-
-            curr.Children['$'] = new TrieNode();
-            //curr.isEow = true;
-        }
-
-        private static TrieNode BuildTree(string word)
-        {
-            TrieNode root = new TrieNode();
-            for (int i = word.Length -1; i >= 0; i--)
-            {
-                InsertIntoTrie(word, i, root);
-            }
-
-            return root;
-        }
-        
         public void Run()
         {
-            var result
+            // var result
                 //= SubstringSearch("SUMIT", "TIM");
-                = LRS("abcpqrabpqpq");
+                // = LRS("abcpqrabpqpq");
 
         }
 

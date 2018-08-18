@@ -63,6 +63,7 @@
     <Compile Include="IK\DP.cs" />
     <Compile Include="IK\Graph\Coordinate.cs" />
     <Compile Include="IK\Graph\GraphDriver.cs" />
+    <Compile Include="IK\Graph\KeysAndDoors.cs" />
     <Compile Include="IK\Graph\KnightsTour.cs" />
     <Compile Include="IK\Graph\ZombieClusters.cs" />
     <Compile Include="IK\LinkedList\BalancedParenthesis.cs" />
@@ -95,6 +96,9 @@
     <Compile Include="IK\Sorting\SortingDriver.cs" />
     <Compile Include="IK\StreamOfInt.cs" />
     <Compile Include="IK\Strings.cs" />
+    <Compile Include="IK\String\LongestSubstring.cs" />
+    <Compile Include="IK\String\StringDriver.cs" />
+    <Compile Include="IK\String\TrieNode.cs" />
     <Compile Include="IK\Trees.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="LeetCode\AddTwoNumbers.cs" />
