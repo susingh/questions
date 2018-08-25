@@ -4,3 +4,10 @@ c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\bin\Deb
 c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\obj\Debug\Questions.exe
 c:\users\sumit\documents\visual studio 2015\Projects\Questions\Questions\obj\Debug\Questions.pdb
 C:\Users\sumit\Documents\Visual Studio 2015\Projects\Questions\Questions\obj\Debug\Questions.csprojResolveAssemblyReference.cache
+C:\Source\Questions\Questions\bin\Debug\Questions.exe.config
+C:\Source\Questions\Questions\bin\Debug\Questions.exe
+C:\Source\Questions\Questions\bin\Debug\Questions.pdb
+C:\Source\Questions\Questions\obj\Debug\Questions.csprojAssemblyReference.cache
+C:\Source\Questions\Questions\obj\Debug\Questions.csproj.CoreCompileInputs.cache
+C:\Source\Questions\Questions\obj\Debug\Questions.exe
+C:\Source\Questions\Questions\obj\Debug\Questions.pdb

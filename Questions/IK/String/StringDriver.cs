@@ -11,8 +11,9 @@ namespace Questions.IK.String
         public void Run()
         {
             var sol
-                 = LongestSubstring.LRS("MISSISSIPPI");
+                 // = LongestSubstring.LRS("MISSISSIPPI");
                  //= LongestSubstring.LRS("abcpqrabpqpq");
+                 = PatternMatch.KMP("AABAACAABAA", "AAB");
         }
     }
 }

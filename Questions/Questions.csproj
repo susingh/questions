@@ -55,6 +55,11 @@
     <Compile Include="CodeFlights\RemoveKFromList.cs" />
     <Compile Include="DescendingOrder.cs" />
     <Compile Include="IK\Adhoc.cs" />
+    <Compile Include="IK\Adhoc_\AdhocDriver.cs" />
+    <Compile Include="IK\Adhoc_\Histogram.cs" />
+    <Compile Include="IK\Adhoc_\MaxSubArray.cs" />
+    <Compile Include="IK\Adhoc_\MaxSubsetSum.cs" />
+    <Compile Include="IK\Adhoc_\SumZero.cs" />
     <Compile Include="IK\Concurrency\BoundedHashset.cs" />
     <Compile Include="IK\Concurrency\ConditionVariable.cs" />
     <Compile Include="IK\Concurrency\ObjectPool.cs" />
@@ -97,6 +102,7 @@
     <Compile Include="IK\StreamOfInt.cs" />
     <Compile Include="IK\Strings.cs" />
     <Compile Include="IK\String\LongestSubstring.cs" />
+    <Compile Include="IK\String\PatternMatch.cs" />
     <Compile Include="IK\String\StringDriver.cs" />
     <Compile Include="IK\String\TrieNode.cs" />
     <Compile Include="IK\Trees.cs" />

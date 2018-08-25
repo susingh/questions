@@ -1,4 +1,5 @@
 ﻿using Questions.IK;
+using Questions.IK.Adhoc_;
 using Questions.IK.Concurrency;
 using Questions.IK.Graph;
 using Questions.IK.Recursion;
@@ -107,7 +108,8 @@ namespace Questions
                 // = new ReaderWriterLockDriver();
                 // = new BoundedHashSetDriver();
                 // = new GraphDriver();
-                = new StringDriver();
+                // = new StringDriver();
+                = new AdhocDriver();
                 
 
             solution.Run();
