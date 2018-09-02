@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CCI\Bits\BitDriver.cs" />
+    <Compile Include="CCI\Bits\Insertion.cs" />
     <Compile Include="CCI\DeleteMiddleNode.cs" />
     <Compile Include="CCI\ListLoop.cs" />
     <Compile Include="CCI\PartitionList.cs" />
@@ -88,7 +90,7 @@
     <Compile Include="IK\Recursion.cs" />
     <Compile Include="IK\Recursion\AllSubsets.cs" />
     <Compile Include="IK\Recursion\Expressions.cs" />
-    <Compile Include="IK\Recursion\NumberOfBSTs.cs" />
+    <Compile Include="IK\Tree\NumberOfBSTs.cs" />
     <Compile Include="IK\Recursion\RecursionDriver.cs" />
     <Compile Include="IK\Recursion\TargetSum.cs" />
     <Compile Include="IK\Recursion\WellFormedBrackets.cs" />
@@ -106,6 +108,8 @@
     <Compile Include="IK\String\StringDriver.cs" />
     <Compile Include="IK\String\TrieNode.cs" />
     <Compile Include="IK\Trees.cs" />
+    <Compile Include="IK\Tree\IsBST.cs" />
+    <Compile Include="IK\Tree\TreeDriver.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="LeetCode\AddTwoNumbers.cs" />
     <Compile Include="LeetCode\ArrayIntersect.cs" />

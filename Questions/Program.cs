@@ -1,9 +1,11 @@
-﻿using Questions.IK;
+﻿using Questions.CCI.Bits;
+using Questions.IK;
 using Questions.IK.Adhoc_;
 using Questions.IK.Concurrency;
 using Questions.IK.Graph;
 using Questions.IK.Recursion;
 using Questions.IK.String;
+using Questions.IK.Tree;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -109,7 +111,9 @@ namespace Questions
                 // = new BoundedHashSetDriver();
                 // = new GraphDriver();
                 // = new StringDriver();
-                = new AdhocDriver();
+                // = new AdhocDriver();
+                // = new TreeDriver();
+                = new BitDriver();
                 
 
             solution.Run();
