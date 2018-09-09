@@ -46,7 +46,9 @@ namespace Questions.CCI.Bits
         public void Run()
         {
             var sol
-                = Insertion.insert(1024, 19, 2, 6);
+                 // = Insertion.insert(1024, 19, 2, 6);
+                 // = FlipbitToWin.Flip(1775);
+                 = PairwiseFlip.Flip(107);
         }
     }
 }

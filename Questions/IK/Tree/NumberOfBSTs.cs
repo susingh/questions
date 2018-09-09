@@ -4,9 +4,24 @@
     {
         public static long how_many_BSTs(int n)
         {
+            // a tree with 0 nodes is an empty tree, just like an empty set
             if (n == 0)
             {
                 return 1;
+            }
+
+            // a tree with a single root node.
+            if (n == 1)
+            {
+                return 1;
+            }
+
+            // pick a root from n nodes
+
+            for (int i = 0; i < n; i++)
+            {
+                // i is the root
+                // find possibilities in the left subr
             }
 
             long totalCount = 0;

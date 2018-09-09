@@ -46,9 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CCI\Bits\BitDriver.cs" />
+    <Compile Include="CCI\Bits\DrawLine.cs" />
+    <Compile Include="CCI\Bits\FlipbitToWin.cs" />
     <Compile Include="CCI\Bits\Insertion.cs" />
+    <Compile Include="CCI\Bits\PairwiseFlip.cs" />
     <Compile Include="CCI\DeleteMiddleNode.cs" />
     <Compile Include="CCI\ListLoop.cs" />
+    <Compile Include="CCI\Maths\MathDriver.cs" />
+    <Compile Include="CCI\Maths\Primality.cs" />
     <Compile Include="CCI\PartitionList.cs" />
     <Compile Include="CCI\SumOfLists.cs" />
     <Compile Include="CodeFlights\FirstDuplicate.cs" />
@@ -61,6 +66,7 @@
     <Compile Include="IK\Adhoc_\Histogram.cs" />
     <Compile Include="IK\Adhoc_\MaxSubArray.cs" />
     <Compile Include="IK\Adhoc_\MaxSubsetSum.cs" />
+    <Compile Include="IK\Adhoc_\PrimeNumbers.cs" />
     <Compile Include="IK\Adhoc_\SumZero.cs" />
     <Compile Include="IK\Concurrency\BoundedHashset.cs" />
     <Compile Include="IK\Concurrency\ConditionVariable.cs" />
@@ -68,6 +74,9 @@
     <Compile Include="IK\Concurrency\ProduceConsumerQueue.cs" />
     <Compile Include="IK\Concurrency\ThreadPool.cs" />
     <Compile Include="IK\DP.cs" />
+    <Compile Include="IK\DP_\CoinChange.cs" />
+    <Compile Include="IK\DP_\DPDriver.cs" />
+    <Compile Include="IK\DP_\MaxPath.cs" />
     <Compile Include="IK\Graph\Coordinate.cs" />
     <Compile Include="IK\Graph\GraphDriver.cs" />
     <Compile Include="IK\Graph\KeysAndDoors.cs" />
