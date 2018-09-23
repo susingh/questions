@@ -27,7 +27,12 @@ namespace Questions.IK.DP_
 
             var sol
                 // = MaxPath.Max_Path(arr);
-                = CoinChange.Coin_Change(8, new int[] { 2, 3, 5 });
+                // = CoinChange.Coin_Change(8, new int[] { 2, 3, 5 });
+                // = Robbery.maxStolenValue(new int[] { 8, 9, 9, 10, 5, 7, 3, 9, 2, 5 });
+                // = Robbery.maxStolenValue(new int[] { 1, 6, 4, 5, 9});
+                = KnightsTour.numPhoneNumbers(1, 2);
+
+
         }
     }
 }

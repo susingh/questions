@@ -11,9 +11,9 @@ namespace Questions.IK.DP_
         public static int Coin_Change(int a, int[] denominations)
         {
             //return CoinChangeRecursion(a, denominations);
-            //return CoinChangeDP(a, denominations);
-            Dictionary<int, int> minCoins = new Dictionary<int, int>();
-            return CoinChangeRecursionWithMemoization(a, denominations,  minCoins);
+            return CoinChangeDP(a, denominations);
+            //Dictionary<int, int> minCoins = new Dictionary<int, int>();
+            //return CoinChangeRecursionWithMemoization(a, denominations,  minCoins);
         }
 
         private static int CoinChangeRecursion(int a, int[] denominations)
@@ -31,7 +31,7 @@ namespace Questions.IK.DP_
             return minCoins != int.MaxValue ? 1 + minCoins : minCoins;
         }
 
-        private static int CoinChangeDP(int a, int[] demominations)
+        private static int CoinChangeDP(int a, int[] denominations)
         {
             int[] dpTable = new int[a + 1];
             for (int i = 0; i < dpTable.Length; i++)
@@ -44,7 +44,7 @@ namespace Questions.IK.DP_
             for (int i = 1; i <= a; i++)
             {
                 int minCoins = int.MaxValue;
-                foreach (var coin in demominations)
+                foreach (var coin in denominations)
                 {
                     int newValue = i - coin;
                     if (newValue >= 0)
@@ -62,7 +62,48 @@ namespace Questions.IK.DP_
                 dpTable[i] = minCoins;
             }
 
+            PrintCoins(a, denominations, dpTable);
             return dpTable[a];
+        }
+
+        private static void PrintCoins(int a, int[] denominations, int[] dpTable)
+        {
+            int index = a;
+            
+            while (index != 0)
+            {
+                foreach (var coin in denominations)
+                {
+                    if (dpTable[a - coin] + 1 == dpTable[a])
+                    {
+                        Console.Write(coin);
+                        a = index - coin;
+                        break;
+                    }
+                }
+            }
+        }
+
+        private static void PrintCoinsRecursive(int[] dpTable, int[] denominations, int a)
+        {
+            if (a < 0)
+            {
+                throw new ArgumentException();
+            }
+
+            if (a == 0)
+            {
+                return;
+            }
+
+            foreach (var coin in denominations)
+            {
+                if (dpTable[a - coin] + 1 == dpTable[a])
+                {
+                    Console.Write(coin);
+                    PrintCoinsRecursive(dpTable, denominations, a - coin);
+                }
+            }
         }
 
         private static int CoinChangeRecursionWithMemoization(int a, int[] denominations, IDictionary<int, int> minCoins)

@@ -52,9 +52,14 @@
     <Compile Include="CCI\Bits\PairwiseFlip.cs" />
     <Compile Include="CCI\DeleteMiddleNode.cs" />
     <Compile Include="CCI\ListLoop.cs" />
+    <Compile Include="CCI\LL\Queue.cs" />
+    <Compile Include="CCI\LL\Stack.cs" />
     <Compile Include="CCI\Maths\MathDriver.cs" />
     <Compile Include="CCI\Maths\Primality.cs" />
     <Compile Include="CCI\PartitionList.cs" />
+    <Compile Include="CCI\Recursion+DP\PowerSet.cs" />
+    <Compile Include="CCI\Recursion+DP\RecursionDriver.cs" />
+    <Compile Include="CCI\Recursion+DP\TripleStep.cs" />
     <Compile Include="CCI\SumOfLists.cs" />
     <Compile Include="CodeFlights\FirstDuplicate.cs" />
     <Compile Include="CodeFlights\FirstNotRepeatingCharacter.cs" />
@@ -76,7 +81,10 @@
     <Compile Include="IK\DP.cs" />
     <Compile Include="IK\DP_\CoinChange.cs" />
     <Compile Include="IK\DP_\DPDriver.cs" />
+    <Compile Include="IK\DP_\KnightsTour.cs" />
+    <Compile Include="IK\DP_\Levenshtein.cs" />
     <Compile Include="IK\DP_\MaxPath.cs" />
+    <Compile Include="IK\DP_\Robbery.cs" />
     <Compile Include="IK\Graph\Coordinate.cs" />
     <Compile Include="IK\Graph\GraphDriver.cs" />
     <Compile Include="IK\Graph\KeysAndDoors.cs" />
