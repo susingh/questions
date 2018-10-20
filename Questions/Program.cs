@@ -1,5 +1,7 @@
 ﻿using Questions.CCI.Bits;
 using Questions.CCI.Maths;
+using Questions.CCI.StacksQueues;
+using Questions.GFG.LL;
 using Questions.IK;
 using Questions.IK.Adhoc_;
 using Questions.IK.Concurrency;
@@ -101,6 +103,7 @@ namespace Questions
                 //= new ElementInCircularRotated();
                 // = new SortingDriver();
                 //= new LinkedListDriver();
+                = new LinkedListDriverGFG();
                 //= new IK.Recursion.RecursionDriver();
                 // = new Trees();
                 // = new DP();
@@ -117,8 +120,9 @@ namespace Questions
                 // = new TreeDriver();
                 // = new BitDriver();
                 // = new MathDriver();
-                 = new DPDriver();
+                // = new DPDriver();
                 //= new CCI.Recursion_DP.RecursionDriver();
+                // = new StacksQueuesDriver();
                 
 
             solution.Run();

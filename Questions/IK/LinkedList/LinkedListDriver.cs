@@ -5,6 +5,19 @@ namespace Questions.IK
 {
     public class LinkedListDriver : IQuestion
     {
+        private LinkedListNode BuildLL(int[] arr)
+        {
+            LinkedListNode head = new LinkedListNode() { val = arr[0] };
+            LinkedListNode curr = head;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                curr.next = new LinkedListNode() { val = arr[i] };
+                curr = curr.next;
+            }
+
+            return head;
+        }
+
         public void Run()
         {
             LinkedListNode intersection = new LinkedListNode()
@@ -73,6 +86,8 @@ namespace Questions.IK
             //    next = circular
             //};
 
+            AlternativeNodeSplit.alternativeSplit(BuildLL(new int[] { 1, 2, 3, 4, 5 }));
+
             var solution
                 // = ReverseLL.reverse(root);
                 // = ZipLL.zip_given_linked_list(root);
@@ -80,7 +95,10 @@ namespace Questions.IK
                 //= BalancedParenthesis.find_max_length_of_matching_parentheses("(((())(()");
                 // = MaxNumberInSlidingWindow.max_in_sliding_window(new int[] { 0 }, 1);
                 // = LLIntersection.find_intersection(root, root2);
-                = FindMedian.find_median(circular.next);
+                // = FindMedian.find_median(circular.next);
+                // = SwapKthNode.swap_nodes(BuildLL(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 3);
+                 = MinStack.min_stack(new int[] { 10, 5, 0, -1, 0, -1, 0 });
+                
         }
     }
 }

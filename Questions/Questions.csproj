@@ -50,22 +50,28 @@
     <Compile Include="CCI\Bits\FlipbitToWin.cs" />
     <Compile Include="CCI\Bits\Insertion.cs" />
     <Compile Include="CCI\Bits\PairwiseFlip.cs" />
-    <Compile Include="CCI\DeleteMiddleNode.cs" />
-    <Compile Include="CCI\ListLoop.cs" />
-    <Compile Include="CCI\LL\Queue.cs" />
-    <Compile Include="CCI\LL\Stack.cs" />
+    <Compile Include="CCI\LL\DeleteMiddleNode.cs" />
+    <Compile Include="CCI\LL\ListLoop.cs" />
+    <Compile Include="CCI\StacksQueues\MinStack.cs" />
+    <Compile Include="CCI\StacksQueues\Queue.cs" />
+    <Compile Include="CCI\StacksQueues\SortStack.cs" />
+    <Compile Include="CCI\StacksQueues\Stack.cs" />
     <Compile Include="CCI\Maths\MathDriver.cs" />
     <Compile Include="CCI\Maths\Primality.cs" />
-    <Compile Include="CCI\PartitionList.cs" />
+    <Compile Include="CCI\LL\PartitionList.cs" />
     <Compile Include="CCI\Recursion+DP\PowerSet.cs" />
     <Compile Include="CCI\Recursion+DP\RecursionDriver.cs" />
     <Compile Include="CCI\Recursion+DP\TripleStep.cs" />
-    <Compile Include="CCI\SumOfLists.cs" />
+    <Compile Include="CCI\LL\SumOfLists.cs" />
+    <Compile Include="CCI\StacksQueues\StackOfPlates.cs" />
+    <Compile Include="CCI\StacksQueues\StacksQueuesDriver.cs" />
     <Compile Include="CodeFlights\FirstDuplicate.cs" />
     <Compile Include="CodeFlights\FirstNotRepeatingCharacter.cs" />
     <Compile Include="CodeFlights\GroupingDishes.cs" />
     <Compile Include="CodeFlights\RemoveKFromList.cs" />
     <Compile Include="DescendingOrder.cs" />
+    <Compile Include="GFG\LL\AddTwoNumbers.cs" />
+    <Compile Include="GFG\LL\LinkedListDriverGFG.cs" />
     <Compile Include="IK\Adhoc.cs" />
     <Compile Include="IK\Adhoc_\AdhocDriver.cs" />
     <Compile Include="IK\Adhoc_\Histogram.cs" />
@@ -90,6 +96,7 @@
     <Compile Include="IK\Graph\KeysAndDoors.cs" />
     <Compile Include="IK\Graph\KnightsTour.cs" />
     <Compile Include="IK\Graph\ZombieClusters.cs" />
+    <Compile Include="IK\LinkedList\AlternativeNodeSplit.cs" />
     <Compile Include="IK\LinkedList\BalancedParenthesis.cs" />
     <Compile Include="IK\LinkedList\FindMedian.cs" />
     <Compile Include="IK\LinkedList\LinkedListDriver.cs" />
@@ -97,7 +104,11 @@
     <Compile Include="IK\LinkedList\LLIntersection.cs" />
     <Compile Include="IK\LinkedList\LRUCache.cs" />
     <Compile Include="IK\LinkedList\MaxNumberInSlidingWindow.cs" />
+    <Compile Include="IK\LinkedList\MiddleNode.cs" />
+    <Compile Include="IK\LinkedList\MinStack.cs" />
+    <Compile Include="IK\LinkedList\RearrangeLL.cs" />
     <Compile Include="IK\LinkedList\ReverseLL.cs" />
+    <Compile Include="IK\LinkedList\SwapKthNode.cs" />
     <Compile Include="IK\LinkedList\ZipLL.cs" />
     <Compile Include="IK\ObjectModelling.cs" />
     <Compile Include="IK\Patterns\Decorator.cs" />
@@ -107,6 +118,8 @@
     <Compile Include="IK\Recursion.cs" />
     <Compile Include="IK\Recursion\AllSubsets.cs" />
     <Compile Include="IK\Recursion\Expressions.cs" />
+    <Compile Include="IK\Sorting\NearestNeighbors.cs" />
+    <Compile Include="IK\Sorting\SortCharacters.cs" />
     <Compile Include="IK\Tree\NumberOfBSTs.cs" />
     <Compile Include="IK\Recursion\RecursionDriver.cs" />
     <Compile Include="IK\Recursion\TargetSum.cs" />
@@ -153,7 +166,9 @@
     <None Include="App.config" />
     <Compile Include="IK\Sorting\TopK.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="IK\LinkedList\MergeSortLL.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

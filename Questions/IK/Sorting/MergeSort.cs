@@ -8,17 +8,25 @@ namespace Questions.IK.Sorting
 {
     class MergeSort
     {
-        void Sort(int[] arr)
+        public static int[] Sort(int[] arr)
         {
             if (arr == null)
             {
-                return;
+                return null;
             }
 
-            Sort(arr, 0, arr.Length - 1);
+            int[] newArr = new int[arr.Length];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                newArr[i] = arr[i];
+            }
+
+            Sort(newArr, 0, newArr.Length - 1);
+            return newArr;
         }
 
-        void Sort(int[] arr, int start, int end)
+        private static void Sort(int[] arr, int start, int end)
         {
             if (start >= end) return;
 
@@ -28,40 +36,72 @@ namespace Questions.IK.Sorting
             Merge(arr, start, mid, end);
         }
 
-        void Merge(int[] arr, int start, int mid, int end)
+        private static void Merge(int[] arr, int start, int mid, int end)
         {
-            int n1 = mid - start + 1;
-            int n2 = end - (mid + 1);
+            int leftStart = start;
+            int rightStart = mid + 1;
 
-            int[] l = new int[n1];
-            int[] r = new int[n2];
+            //int n1 = mid - start + 1;
+            //int n2 = end - (mid + 1);
 
-            Copy(arr, start, mid, l);
-            Copy(arr, mid + 1, end, r);
+            //int[] l = new int[n1];
+            //int[] r = new int[n2];
 
-            int i = 0, j = 0, k = start;
-            while (i < n1 && j < n2)
+            //Copy(arr, start, mid, l);
+            //Copy(arr, mid + 1, end, r);
+
+            int[] result = new int[end - start + 1];
+
+            //int i = 0, j = 0, k = start;
+            //while (i < n1 && j < n2)
+            //{
+            //    if (l[i] <= r[j])
+            //    {
+            //        arr[k++] = l[i++];
+            //    }
+            //    else
+            //    {
+            //        arr[k++] = r[j++];
+            //    }
+            //}
+
+            int resultStart = 0;
+            while (leftStart <= mid && rightStart <= end)
             {
-                if (l[i] <= r[j])
+                if (arr[leftStart] <= arr[rightStart])
                 {
-                    arr[k++] = l[i++];
+                    result[resultStart++] = arr[leftStart++];
                 }
                 else
                 {
-                    arr[k++] = r[j++];
+                    result[resultStart++] = arr[rightStart++];
                 }
             }
 
-            while (i < n1)
+            while (leftStart <= mid)
             {
-                arr[k++] = l[i++];
+                result[resultStart++] = arr[leftStart++];
             }
 
-            while (j < n2)
+            while (rightStart <= end)
             {
-                arr[k++] = r[j++];
+                result[resultStart++] = arr[rightStart++];
             }
 
+            //while (i < n1)
+            //{
+            //    arr[k++] = l[i++];
+            //}
+
+            //while (j < n2)
+            //{
+            //    arr[k++] = r[j++];
+            //}
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                arr[start + i] = result[i];
+            }
         }
 
         void Copy(int[] original, int start, int end, int[] newArr)

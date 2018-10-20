@@ -38,11 +38,27 @@ namespace Questions.IK
 
             //var result = merger_first_into_second(arr1, arr2);
 
+            int[][] points =
+            {
+                new int[] { 1, 0},
+                new int[] { 2, 0},
+                new int[] { 0, 2},
+                new int[] { 1, 2},
+                new int[] { 2, 2},
+                new int[] { 3, 3},
+                new int[] { 4, 3},
+                new int[] { 4, 1},
+            };
+
+
             var sol
                 //= GroupNumbers.solve(arr);
                 // = TopK.solve(arr, 2);
                 // = MergeKSortedArrays.mergeArrays(arr2d);
-                = MergeTwoArrays.merger_first_into_second(new int[] { 11, 11 }, new int[] { 3, 11, 0, 0 });
+                // = MergeTwoArrays.merger_first_into_second(new int[] { 11, 11 }, new int[] { 3, 11, 0, 0 });
+                // = MergeSort.Sort(new int[] { 5, 0, -1, -2, 4, 5 });
+                // = SortCharacters.sortCharacters("This is easy");
+                = NearestNeighbors.find_nearest_neighbours(3, 1, points, 3);
         }
     }
 }

@@ -4,14 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Questions.CCI.LL
+namespace Questions.CCI.StacksQueues
 {
-    class Queue
+    class StackNode
     {
-        private StackNode head;
-        private StackNode tail;
+        public int val;
+        public StackNode next;
+    }
 
-        int Dequeue()
+    class Stack
+    {
+        StackNode head = null;
+
+        public int Pop()
         {
             if (head == null)
             {
@@ -19,39 +24,31 @@ namespace Questions.CCI.LL
             }
 
             StackNode curr = head;
-            
-            if (head == tail)
-            {
-                head = tail = null;
-            }
-            else
-            {
-                head = curr.next;
-            }
-
+            head = curr.next;
             return curr.val;
         }
 
-        void Enqueue(int val)
+        public void Push (int val)
         {
-            var node = new StackNode() { val = val };
-            if (tail == null)
+            var node = new StackNode() { val = val, next = null };
+
+            if (head == null)
             {
-                head = tail = node;
+                head = node;
             }
             else
             {
-                tail.next = node;
-                tail = node;
+                node.next = head;
+                head = node;
             }
         }
 
-        bool IsEmpty()
+        public bool IsEmpty()
         {
             return head == null;
         }
 
-        int Peek()
+        public int Peek()
         {
             if (head == null)
             {
