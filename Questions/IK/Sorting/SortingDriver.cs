@@ -51,14 +51,15 @@ namespace Questions.IK
             };
 
 
-            var sol
+            //var sol
                 //= GroupNumbers.solve(arr);
                 // = TopK.solve(arr, 2);
                 // = MergeKSortedArrays.mergeArrays(arr2d);
                 // = MergeTwoArrays.merger_first_into_second(new int[] { 11, 11 }, new int[] { 3, 11, 0, 0 });
                 // = MergeSort.Sort(new int[] { 5, 0, -1, -2, 4, 5 });
                 // = SortCharacters.sortCharacters("This is easy");
-                = NearestNeighbors.find_nearest_neighbours(3, 1, points, 3);
+                // = NearestNeighbors.find_nearest_neighbours(3, 1, points, 3);
+                QuickSort.Sort(new int[] { 9, 1, 10, 2, 11, 3, 7, 6, 8 });
         }
     }
 }

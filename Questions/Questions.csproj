@@ -72,6 +72,13 @@
     <Compile Include="DescendingOrder.cs" />
     <Compile Include="GFG\LL\AddTwoNumbers.cs" />
     <Compile Include="GFG\LL\LinkedListDriverGFG.cs" />
+    <Compile Include="GFG\LL\MergeListsAlternatingly.cs" />
+    <Compile Include="GFG\LL\ReverseLLInGroups.cs" />
+    <Compile Include="GFG\Sorting\BinarySearch.cs" />
+    <Compile Include="GFG\Sorting\BinarySearchRotatedArray.cs" />
+    <Compile Include="GFG\Sorting\BubbleSort.cs" />
+    <Compile Include="GFG\Sorting\HeapSort.cs" />
+    <Compile Include="GFG\Sorting\SortingDriverGFG.cs" />
     <Compile Include="IK\Adhoc.cs" />
     <Compile Include="IK\Adhoc_\AdhocDriver.cs" />
     <Compile Include="IK\Adhoc_\Histogram.cs" />
@@ -165,6 +172,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <Compile Include="IK\Sorting\TopK.cs" />
+    <Compile Include="GFG\LL\MergeSortLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IK\LinkedList\MergeSortLL.cs" />

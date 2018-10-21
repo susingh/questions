@@ -1,4 +1,6 @@
-﻿namespace Questions.IK.Sorting
+﻿using System;
+
+namespace Questions.IK.Sorting
 {
     /*
      * Quick sort:
@@ -8,12 +10,12 @@
      */
     class QuickSort
     {
-        void Sort(int[] arr)
+        public static void Sort(int[] arr)
         {
             Sort(arr, 0, arr.Length - 1);
         }
 
-        void Sort(int[] arr, int start, int end)
+        private static void Sort(int[] arr, int start, int end)
         {
             if (start >= end)
             {
@@ -27,49 +29,50 @@
             Sort(arr, pi + 1, end);
         }
 
-
-        private int ChoosePivot(int[] arr, int start, int end)
+        private static void Swap(int[] arr, int a, int b)
         {
-            // choose a random pivot to avoid hitting the worst case.
-            return start;
+            int temp = arr[a];
+            arr[a] = arr[b];
+            arr[b] = temp;
+        }
+        
+        private static int ChoosePivot(int[] arr, int start, int end)
+        {
+            // Pick a random pivot to avoid worst case performance.
+            var rand = new Random();
+            return rand.Next(start, end);
         }
 
-        private int Partition(int[] arr, int start, int end, int pivot)
+        private static int Partition(int[] arr, int start, int end, int pivot)
         {
-            // After partition, the values on the left of the array will be smaller or equal to the partition
+            // After partition, the values on the left of the array will be smaller or equal to the partition.
             int pValue = arr[pivot];
-            int le_count = 0;
-            for (int i = start; i <= end; i++)
+
+            // Swap the last element with pValue
+            Swap(arr, pivot, end);
+
+            int i = start;
+            int j = end - 1;
+
+            while (i < j)
             {
-                if (arr[i] <= pValue)
+                while (i <= end - 1 && arr[i] < pValue)
+                    i++;
+
+                while (j >= start && arr[j] > pValue)
+                    j--;
+
+                if (i < j)
                 {
-                    le_count++;
+                    Swap(arr, i, j);
+                    i++;
+                    j--;
                 }
             }
 
-            int[] output = new int[end - start + 1];
-            output[le_count - 1] = pValue;
-
-            int le_index = 0;
-            int ge_index = le_count;
-
-            for (int i = start; i <= end; i++)
-            {
-                if (i == pivot)
-                {
-                    continue;
-                }
-                else if (arr[i] <= pValue)
-                {
-                    output[le_index++] = arr[i];
-                }
-                else
-                {
-                    output[ge_index++] = arr[i];
-                }
-            }
-
-            return le_count - 1;
+            // put the partition element back in place.
+            Swap(arr, i, end);
+            return i;
         }
     }
 }

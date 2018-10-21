@@ -19,7 +19,15 @@ namespace Questions.GFG.LL
                     val = 6,
                     next = new LinkedListNode
                     {
-                        val = 3
+                        val = 3,
+                        next = new LinkedListNode
+                        {
+                            val = 1,
+                            next = new LinkedListNode
+                            {
+                                val = 2
+                            }
+                        }
                     }
                 }
             };
@@ -32,12 +40,18 @@ namespace Questions.GFG.LL
                     val = 4,
                     next = new LinkedListNode
                     {
-                        val = 2
+                        val = 2,
+                        next = new LinkedListNode
+                        {
+                            val = 1
+                        }
                     }
                 }
             };
 
-            var sol = AddTwoNumbers.Sum(l1, l2);
+            //AddTwoNumbers.Sum(l1, l2);
+            //MergeListsAlternatingly.MergeList(l1, l2);
+            MergeSortLL.Sort(l1);
         }
     }
 }
