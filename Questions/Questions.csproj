@@ -69,6 +69,7 @@
     <Compile Include="CodeFlights\FirstNotRepeatingCharacter.cs" />
     <Compile Include="CodeFlights\GroupingDishes.cs" />
     <Compile Include="CodeFlights\RemoveKFromList.cs" />
+    <Compile Include="DataStructures\PrefixTree.cs" />
     <Compile Include="DescendingOrder.cs" />
     <Compile Include="GFG\LL\AddTwoNumbers.cs" />
     <Compile Include="GFG\LL\LinkedListDriverGFG.cs" />
@@ -79,6 +80,10 @@
     <Compile Include="GFG\Sorting\BubbleSort.cs" />
     <Compile Include="GFG\Sorting\HeapSort.cs" />
     <Compile Include="GFG\Sorting\SortingDriverGFG.cs" />
+    <Compile Include="GFG\String\CountTriplets.cs" />
+    <Compile Include="GFG\String\ReverseSpecialString.cs" />
+    <Compile Include="GFG\String\StringDriverGFG.cs" />
+    <Compile Include="GFG\String\ZigZag.cs" />
     <Compile Include="IK\Adhoc.cs" />
     <Compile Include="IK\Adhoc_\AdhocDriver.cs" />
     <Compile Include="IK\Adhoc_\Histogram.cs" />
@@ -163,6 +168,7 @@
     <Compile Include="LeetCode\Romans.cs" />
     <Compile Include="Models\ListNode.cs" />
     <Compile Include="Models\TreeNode.cs" />
+    <Compile Include="Models\TrieNode.cs" />
     <Compile Include="Practice\Bitwise.cs" />
     <Compile Include="Practice\ElementInCircularRotated.cs" />
     <Compile Include="Program.cs" />

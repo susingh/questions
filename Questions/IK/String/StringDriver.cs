@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.DataStructures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,20 @@ namespace Questions.IK.String
             var sol
                  // = LongestSubstring.LRS("MISSISSIPPI");
                  //= LongestSubstring.LRS("abcpqrabpqpq");
-                 = PatternMatch.KMP("AABAACAABAA", "AAB");
+                 // = PatternMatch.KMP("AABAACAABAA", "AAB");
+                 = new PrefixTree();
+
+            sol.Add("CAT");
+            sol.Add("DOLL");
+            sol.Add("DOG");
+            sol.Add("DOGGY");
+            sol.Add("CUT");
+            sol.Add("CAN");
+
+            var result = sol.Find("DOT");
+            result = sol.Find("DOLL");
+
+            var arr = sol.PrefixMatch("DOG");
         }
     }
 }
