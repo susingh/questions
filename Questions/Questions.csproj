@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\KMP.cs" />
     <Compile Include="CCI\Bits\BitDriver.cs" />
     <Compile Include="CCI\Bits\DrawLine.cs" />
     <Compile Include="CCI\Bits\FlipbitToWin.cs" />
@@ -132,6 +133,8 @@
     <Compile Include="IK\Recursion\Expressions.cs" />
     <Compile Include="IK\Sorting\NearestNeighbors.cs" />
     <Compile Include="IK\Sorting\SortCharacters.cs" />
+    <Compile Include="IK\String\Neuronyms.cs" />
+    <Compile Include="IK\String\SubstringSearch.cs" />
     <Compile Include="IK\Tree\NumberOfBSTs.cs" />
     <Compile Include="IK\Recursion\RecursionDriver.cs" />
     <Compile Include="IK\Recursion\TargetSum.cs" />
@@ -148,7 +151,6 @@
     <Compile Include="IK\String\LongestSubstring.cs" />
     <Compile Include="IK\String\PatternMatch.cs" />
     <Compile Include="IK\String\StringDriver.cs" />
-    <Compile Include="IK\String\TrieNode.cs" />
     <Compile Include="IK\Trees.cs" />
     <Compile Include="IK\Tree\IsBST.cs" />
     <Compile Include="IK\Tree\TreeDriver.cs" />

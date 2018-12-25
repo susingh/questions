@@ -10,21 +10,13 @@ namespace Questions.IK.String
     {
         public static int[] KMP(string t, string p)
         {
-            List<int> points = new List<int>();
-            NaiveSearch(t, p, points);
-            
-            if (points.Count == 0)
-            {
-                points.Add(-1);
-            }
-
-            return points.ToArray();
+            return new Algorithm.KMP().FindMatches(t, p);
         }
 
         private static void NaiveSearch(string t, string p, List<int> points)
         {
             int i = 0;
-            while(i < t.Length)
+            while (i < t.Length)
             {
                 int k = i;
                 int j = 0;
@@ -46,7 +38,7 @@ namespace Questions.IK.String
                     // found match
                     points.Add(i);
                 }
-                
+
 
                 i++;
             }

@@ -1,4 +1,5 @@
 ﻿using Questions.IK.String;
+using Questions.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -103,7 +104,7 @@ namespace Questions.IK
                 curr = curr.Children[c];
             }
 
-            curr.isEow = true;
+            curr.isEOW = true;
         }
 
         public void Run()
