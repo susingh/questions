@@ -114,6 +114,7 @@
     <Compile Include="IK\LinkedList\Cycle.cs" />
     <Compile Include="IK\LinkedList\DutchSort.cs" />
     <Compile Include="IK\LinkedList\FindMedian.cs" />
+    <Compile Include="IK\LinkedList\FlattenLL.cs" />
     <Compile Include="IK\LinkedList\LinkedListDriver.cs" />
     <Compile Include="IK\LinkedList\LinkedListNode.cs" />
     <Compile Include="IK\LinkedList\LLIntersection.cs" />
