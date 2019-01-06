@@ -86,7 +86,7 @@ namespace Questions.IK
             //    next = circular
             //};
 
-            AlternativeNodeSplit.alternativeSplit(BuildLL(new int[] { 1, 2, 3, 4, 5 }));
+            //AlternativeNodeSplit.alternativeSplit(BuildLL(new int[] { 1, 2, 3, 4, 5 }));
 
             var solution
                 // = ReverseLL.reverse(root);
@@ -97,7 +97,8 @@ namespace Questions.IK
                 // = LLIntersection.find_intersection(root, root2);
                 // = FindMedian.find_median(circular.next);
                 // = SwapKthNode.swap_nodes(BuildLL(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 3);
-                 = MinStack.min_stack(new int[] { 10, 5, 0, -1, 0, -1, 0 });
+                // = MinStack.min_stack(new int[] { 10, 5, 0, -1, 0, -1, 0 });
+                = DutchSort.Sort(BuildLL(new int[] { 2, 3, 1, 5, 10, 1, 2 }), 2);
                 
         }
     }

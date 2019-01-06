@@ -104,7 +104,7 @@ namespace Questions
             var solution
                 //= new ElementInCircularRotated();
                 // = new SortingDriver();
-                //= new LinkedListDriver();
+                = new LinkedListDriver();
                 //= new LinkedListDriverGFG();
                 // = new SortingDriverGFG();
                 //= new IK.Recursion.RecursionDriver();
@@ -118,7 +118,7 @@ namespace Questions
                 // = new ReaderWriterLockDriver();
                 // = new BoundedHashSetDriver();
                 // = new GraphDriver();
-                 = new StringDriver();
+                // = new StringDriver();
                 // = new AdhocDriver();
                 // = new TreeDriver();
                 // = new BitDriver();
