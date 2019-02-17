@@ -40,5 +40,21 @@ namespace Questions.IK.Tree
             array.Add(node.val);
             inorderTraversal(node.right, array);
         }
+
+        private static bool isBSTRecursive(TreeNode root)
+        {
+            return isBSTRecursive(root, int.MinValue, int.MaxValue);
+        }
+
+        private static bool isBSTRecursive(TreeNode root, int min, int max)
+        {
+            if (root == null)
+                return true;
+
+            if (root.val >= max || root.val <= min)
+                return false;
+
+            return isBSTRecursive(root.left, min, root.val) && isBSTRecursive(root.right, root.val, max);
+        }
     }
 }

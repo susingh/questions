@@ -36,5 +36,12 @@ namespace Questions
                 current = current.next;
             }
         }
+
+        public static void Swap<T>(T[] arr, int i, int j)
+        {
+            T temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
     }
 }

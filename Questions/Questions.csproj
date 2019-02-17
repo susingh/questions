@@ -70,6 +70,9 @@
     <Compile Include="CodeFlights\FirstNotRepeatingCharacter.cs" />
     <Compile Include="CodeFlights\GroupingDishes.cs" />
     <Compile Include="CodeFlights\RemoveKFromList.cs" />
+    <Compile Include="DataStructures\IHeap.cs" />
+    <Compile Include="DataStructures\MaxHeap.cs" />
+    <Compile Include="DataStructures\MinHeap.cs" />
     <Compile Include="DataStructures\PrefixTree.cs" />
     <Compile Include="DescendingOrder.cs" />
     <Compile Include="GFG\LL\AddTwoNumbers.cs" />
@@ -104,10 +107,21 @@
     <Compile Include="IK\DP_\Levenshtein.cs" />
     <Compile Include="IK\DP_\MaxPath.cs" />
     <Compile Include="IK\DP_\Robbery.cs" />
+    <Compile Include="IK\Graph\AlienDictionary.cs" />
+    <Compile Include="IK\Graph\BFS.cs" />
     <Compile Include="IK\Graph\Coordinate.cs" />
+    <Compile Include="IK\Graph\CountIsland.cs" />
+    <Compile Include="IK\Graph\CountPaths.cs" />
+    <Compile Include="IK\Graph\DAGCycle.cs" />
+    <Compile Include="IK\Graph\DFS.cs" />
     <Compile Include="IK\Graph\GraphDriver.cs" />
+    <Compile Include="IK\Graph\GuardDistance.cs" />
     <Compile Include="IK\Graph\KeysAndDoors.cs" />
     <Compile Include="IK\Graph\KnightsTour.cs" />
+    <Compile Include="IK\Graph\LongestPath.cs" />
+    <Compile Include="IK\Graph\StringTransformation.cs" />
+    <Compile Include="IK\Graph\TopologicalSort.cs" />
+    <Compile Include="IK\Graph\WordsIndices.cs" />
     <Compile Include="IK\Graph\ZombieClusters.cs" />
     <Compile Include="IK\LinkedList\AlternativeNodeSplit.cs" />
     <Compile Include="IK\LinkedList\BalancedParenthesis.cs" />
@@ -125,6 +139,7 @@
     <Compile Include="IK\LinkedList\RearrangeLL.cs" />
     <Compile Include="IK\LinkedList\ReverseLL.cs" />
     <Compile Include="IK\LinkedList\SwapKthNode.cs" />
+    <Compile Include="IK\LinkedList\ZigZagTraversal.cs" />
     <Compile Include="IK\LinkedList\ZipLL.cs" />
     <Compile Include="IK\ObjectModelling.cs" />
     <Compile Include="IK\Patterns\Decorator.cs" />
@@ -132,13 +147,23 @@
     <Compile Include="IK\PrintSortedNumbers.cs" />
     <Compile Include="IK\Concurrency\ReaderWriterLock.cs" />
     <Compile Include="IK\Recursion.cs" />
-    <Compile Include="IK\Recursion\AllSubsets.cs" />
+    <Compile Include="IK\Recursion\CountBST.cs" />
+    <Compile Include="IK\Recursion\DoublePower.cs" />
+    <Compile Include="IK\Recursion\NQueens.cs" />
+    <Compile Include="IK\Recursion\PalindromicDecomposition.cs" />
+    <Compile Include="IK\Recursion\PatternMatcher.cs" />
+    <Compile Include="IK\Recursion\Subsets.cs" />
     <Compile Include="IK\Recursion\Expressions.cs" />
+    <Compile Include="IK\Recursion\Permutations.cs" />
+    <Compile Include="IK\Recursion\TowersOfHanoi.cs" />
     <Compile Include="IK\Sorting\NearestNeighbors.cs" />
     <Compile Include="IK\Sorting\SortCharacters.cs" />
+    <Compile Include="IK\Sorting\SortedSets.cs" />
+    <Compile Include="IK\Sorting\StreamMedian.cs" />
     <Compile Include="IK\String\Neuronyms.cs" />
     <Compile Include="IK\String\ShortestSubstringContainingSet.cs" />
     <Compile Include="IK\String\SubstringSearch.cs" />
+    <Compile Include="IK\Tree\KthSmallest.cs" />
     <Compile Include="IK\Tree\NumberOfBSTs.cs" />
     <Compile Include="IK\Recursion\RecursionDriver.cs" />
     <Compile Include="IK\Recursion\TargetSum.cs" />
@@ -157,7 +182,9 @@
     <Compile Include="IK\String\StringDriver.cs" />
     <Compile Include="IK\Trees.cs" />
     <Compile Include="IK\Tree\IsBST.cs" />
+    <Compile Include="IK\Tree\PostOrderWithoutRecursion.cs" />
     <Compile Include="IK\Tree\TreeDriver.cs" />
+    <Compile Include="IK\Tree\UpsideDown.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="LeetCode\AddTwoNumbers.cs" />
     <Compile Include="LeetCode\ArrayIntersect.cs" />
@@ -175,6 +202,7 @@
     <Compile Include="Models\ListNode.cs" />
     <Compile Include="Models\TreeNode.cs" />
     <Compile Include="Models\TrieNode.cs" />
+    <Compile Include="Models\Vertex.cs" />
     <Compile Include="Practice\Bitwise.cs" />
     <Compile Include="Practice\ElementInCircularRotated.cs" />
     <Compile Include="Program.cs" />
@@ -185,6 +213,7 @@
     <None Include="App.config" />
     <Compile Include="IK\Sorting\TopK.cs" />
     <Compile Include="GFG\LL\MergeSortLL.cs" />
+    <Compile Include="IK\Sorting\KRank.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IK\LinkedList\MergeSortLL.cs" />

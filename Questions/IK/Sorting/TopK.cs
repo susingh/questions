@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.DataStructures;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,13 +26,36 @@ namespace Questions.IK.Sorting
 
                 list.Add(arr[i], arr[i]);
 
-				if (list.Count > k)
+                if (list.Count > k)
                 {
                     list.RemoveAt(list.Count - 1);
                 }
             }
 
             return list.Keys.ToArray();
+        }
+
+        private class Stream
+        {
+            public int Next()
+            {
+                return new Random((int)DateTime.UtcNow.Ticks).Next(-1, 1000);
+            }
+        }
+
+        private static void PrintTopK(Stream ip, int k, int magicNumber)
+        {
+            MaxHeap<int> heap = new MaxHeap<int>();
+            int val;
+            while ((val = ip.Next()) != -1)
+            {
+                if (val == magicNumber)
+                {
+                    // print the current top k
+                }
+
+                heap.Add(val);
+            }
         }
     }
 }

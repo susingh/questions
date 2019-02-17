@@ -51,7 +51,7 @@ namespace Questions.IK
             };
 
 
-            //var sol
+            var sol
                 //= GroupNumbers.solve(arr);
                 // = TopK.solve(arr, 2);
                 // = MergeKSortedArrays.mergeArrays(arr2d);
@@ -59,7 +59,8 @@ namespace Questions.IK
                 // = MergeSort.Sort(new int[] { 5, 0, -1, -2, 4, 5 });
                 // = SortCharacters.sortCharacters("This is easy");
                 // = NearestNeighbors.find_nearest_neighbours(3, 1, points, 3);
-                QuickSort.Sort(new int[] { 9, 1, 10, 2, 11, 3, 7, 6, 8 });
+                // QuickSort.Sort(new int[] { 9, 1, 10, 2, 11, 3, 7, 6, 8 });
+                = KRank.FindRankK(new int[] { 7, 10, 4, 3, 20, 15 }, 3);
         }
     }
 }
