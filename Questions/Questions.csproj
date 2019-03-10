@@ -121,7 +121,7 @@
     <Compile Include="IK\Graph\LongestPath.cs" />
     <Compile Include="IK\Graph\StringTransformation.cs" />
     <Compile Include="IK\Graph\TopologicalSort.cs" />
-    <Compile Include="IK\Graph\WordsIndices.cs" />
+    <Compile Include="IK\String\WordsIndices.cs" />
     <Compile Include="IK\Graph\ZombieClusters.cs" />
     <Compile Include="IK\LinkedList\AlternativeNodeSplit.cs" />
     <Compile Include="IK\LinkedList\BalancedParenthesis.cs" />
@@ -160,6 +160,7 @@
     <Compile Include="IK\Sorting\SortCharacters.cs" />
     <Compile Include="IK\Sorting\SortedSets.cs" />
     <Compile Include="IK\Sorting\StreamMedian.cs" />
+    <Compile Include="IK\String\LongestRepeatedSubstring.cs" />
     <Compile Include="IK\String\Neuronyms.cs" />
     <Compile Include="IK\String\ShortestSubstringContainingSet.cs" />
     <Compile Include="IK\String\SubstringSearch.cs" />

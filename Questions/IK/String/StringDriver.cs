@@ -17,7 +17,8 @@ namespace Questions.IK.String
                  // = PatternMatch.KMP("aaaaaab", "CCCDCCCCCD");
                  // = new PrefixTree();
                  // = SubstringSearch.FindMatch("aaaaaab", "a");
-                 = Neuronyms_IK.neuronyms("nailed");
+                 // = Neuronyms_IK.neuronyms("nailed");
+                 = ShortestSubstringContainingSet.FindSubstring("AYZABOBECODXBANC", new char[] { 'A', 'B', 'C' });
 
             //sol.Add("CAT");
             //sol.Add("DOLL");

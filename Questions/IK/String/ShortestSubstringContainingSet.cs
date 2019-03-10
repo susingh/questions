@@ -25,7 +25,8 @@ namespace Questions.IK.String
 
         public static string FindSubstring(string input, char[] set)
         {
-            var result = BruteForce(input, set);
+            //var result = BruteForce(input, set);
+            var result = SlidingWindow(input, set);
 
             if (result.LeftIndex == 0 && result.RightIndex == int.MaxValue)
             {
@@ -33,6 +34,83 @@ namespace Questions.IK.String
             }
 
             return input.Substring(result.LeftIndex, result.RightIndex - result.LeftIndex + 1);
+        }
+
+        private static Result SlidingWindow(string strText, char[] set)
+        {
+            // using the sliding window approach
+            IDictionary<char, int> counts = new Dictionary<char, int>();
+            foreach (char c in set)
+            {
+                counts[c] = 0;
+            }
+
+            int missing = set.Length;
+            Result result = new Result();
+
+            // window
+            int s = 0;
+            int e = -1;
+
+            while (e < strText.Length)
+            {
+                if (missing > 0)
+                {
+                    e++;
+
+                    // expand
+                    if (counts.ContainsKey(strText[e]))
+                    {
+                        if (counts[strText[e]] == 0)
+                        {
+                            missing--;
+                            if (missing == 0)
+                            {
+                                // check Length
+                                int len = e - s + 1;
+                                if ((result.RightIndex - result.LeftIndex + 1) > len)
+                                {
+                                    result.LeftIndex = s;
+                                    result.RightIndex = e;
+                                }
+                            }
+                        }
+
+                        counts[strText[e]] += 1;
+                    }
+
+                }
+                else if (missing == 0)
+                {
+                    // shrink
+
+                    if (counts.ContainsKey(strText[s]))
+                    {
+                        counts[strText[s]] -= 1;
+
+                        if (counts[strText[s]] == 0)
+                        {
+                            missing++;
+                        }
+                    }
+
+                    s++;
+
+                    if (missing == 0)
+                    {
+                        // check Length
+                        int len = e - s + 1;
+                        if ((result.RightIndex - result.LeftIndex + 1) > len)
+                        {
+                            result.LeftIndex = s;
+                            result.RightIndex = e;
+                        }
+                    }
+
+                }
+            }
+
+            return result;
         }
 
         private static Result BruteForce(string input, char[] set)

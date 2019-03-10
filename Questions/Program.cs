@@ -1,5 +1,7 @@
 ﻿using Questions.IK;
 using Questions.IK.Graph;
+using Questions.IK.String;
+using Questions.IK.Tree;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -105,8 +107,8 @@ namespace Questions
                 // = new ObjectPoolDriver();
                 // = new ReaderWriterLockDriver();
                 // = new BoundedHashSetDriver();
-                = new GraphDriver();
-                // = new StringDriver();
+                // = new GraphDriver();
+                = new StringDriver();
                 // = new AdhocDriver();
                 // = new TreeDriver();
                 // = new BitDriver();

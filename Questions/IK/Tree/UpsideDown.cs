@@ -10,19 +10,18 @@ namespace Questions.IK.Tree
     {
         public static TreeNode flipUpsideDown(TreeNode root)
         {
-            if (root == null)
+            if (root.left == null && root.right == null)
                 return root;
 
-            if (root.left != null)
-                flipUpsideDown(root.left);
+            var temp = flipUpsideDown(root.left);
 
-            root.left.left = root;
-            root.left.right = root.left;
+            temp.left = root.right;
+            temp.right = root;
 
             root.left = null;
             root.right = null;
 
-            return root;
+            return temp;
         }
     }
 }
