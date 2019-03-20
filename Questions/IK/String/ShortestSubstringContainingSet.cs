@@ -26,17 +26,18 @@ namespace Questions.IK.String
         public static string FindSubstring(string input, char[] set)
         {
             //var result = BruteForce(input, set);
-            var result = SlidingWindow(input, set);
+            return SlidingWindow(input, set);
 
-            if (result.LeftIndex == 0 && result.RightIndex == int.MaxValue)
-            {
-                return string.Empty;
-            }
+            //if (result.LeftIndex == 0 && result.RightIndex == int.MaxValue)
+            //{
+            //    return string.Empty;
+            //}
 
-            return input.Substring(result.LeftIndex, result.RightIndex - result.LeftIndex + 1);
+            //return input.Substring(result.LeftIndex, result.RightIndex - result.LeftIndex + 1);
+
         }
 
-        private static Result SlidingWindow(string strText, char[] set)
+        private static string SlidingWindow(string strText, char[] set)
         {
             // using the sliding window approach
             IDictionary<char, int> counts = new Dictionary<char, int>();
@@ -45,9 +46,9 @@ namespace Questions.IK.String
                 counts[c] = 0;
             }
 
+            string minString = strText;
             int missing = set.Length;
-            Result result = new Result();
-
+            
             // window
             int s = 0;
             int e = -1;
@@ -56,61 +57,60 @@ namespace Questions.IK.String
             {
                 if (missing > 0)
                 {
+                    // expand
                     e++;
 
-                    // expand
-                    if (counts.ContainsKey(strText[e]))
+                    if (e == strText.Length)
+                        break;
+
+                    char ch = strText[e];
+
+                    if (counts.ContainsKey(ch))
                     {
-                        if (counts[strText[e]] == 0)
-                        {
+                        counts[ch] += 1;
+                        if (counts[ch] == 1)
                             missing--;
-                            if (missing == 0)
-                            {
-                                // check Length
-                                int len = e - s + 1;
-                                if ((result.RightIndex - result.LeftIndex + 1) > len)
-                                {
-                                    result.LeftIndex = s;
-                                    result.RightIndex = e;
-                                }
-                            }
-                        }
 
-                        counts[strText[e]] += 1;
                     }
-
-                }
-                else if (missing == 0)
-                {
-                    // shrink
-
-                    if (counts.ContainsKey(strText[s]))
-                    {
-                        counts[strText[s]] -= 1;
-
-                        if (counts[strText[s]] == 0)
-                        {
-                            missing++;
-                        }
-                    }
-
-                    s++;
 
                     if (missing == 0)
                     {
                         // check Length
                         int len = e - s + 1;
-                        if ((result.RightIndex - result.LeftIndex + 1) > len)
+                        if (minString.Length > len)
                         {
-                            result.LeftIndex = s;
-                            result.RightIndex = e;
+                            minString = strText.Substring(s, len);
+                        }
+                    }
+                }
+                else if (missing == 0)
+                {
+                    // shrink
+                    char ch = strText[s];
+                    s++;
+
+                    if (counts.ContainsKey(ch))
+                    {
+                        counts[ch] -= 1;
+                        if (counts[ch] == 0)
+                        {
+                            missing++;
                         }
                     }
 
+                    if (missing == 0)
+                    {
+                        // check Length
+                        int len = e - s + 1;
+                        if (minString.Length > len)
+                        {
+                            minString = strText.Substring(s, len);
+                        }
+                    }
                 }
             }
 
-            return result;
+                return minString;
         }
 
         private static Result BruteForce(string input, char[] set)

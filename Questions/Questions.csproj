@@ -102,11 +102,15 @@
     <Compile Include="IK\Concurrency\ThreadPool.cs" />
     <Compile Include="IK\DP.cs" />
     <Compile Include="IK\DP_\CoinChange.cs" />
+    <Compile Include="IK\DP_\CoinPlay.cs" />
+    <Compile Include="IK\DP_\CutRope.cs" />
     <Compile Include="IK\DP_\DPDriver.cs" />
     <Compile Include="IK\DP_\KnightsTour.cs" />
     <Compile Include="IK\DP_\Levenshtein.cs" />
     <Compile Include="IK\DP_\MaxPath.cs" />
+    <Compile Include="IK\DP_\NStairs.cs" />
     <Compile Include="IK\DP_\Robbery.cs" />
+    <Compile Include="IK\DP_\WordBreak.cs" />
     <Compile Include="IK\Graph\AlienDictionary.cs" />
     <Compile Include="IK\Graph\BFS.cs" />
     <Compile Include="IK\Graph\Coordinate.cs" />
@@ -121,6 +125,11 @@
     <Compile Include="IK\Graph\LongestPath.cs" />
     <Compile Include="IK\Graph\StringTransformation.cs" />
     <Compile Include="IK\Graph\TopologicalSort.cs" />
+    <Compile Include="IK\String\BoggleSolver.cs" />
+    <Compile Include="IK\String\LongestPalindromeSubstring.cs" />
+    <Compile Include="IK\String\LongestSubstringWith2DistinctChars.cs" />
+    <Compile Include="IK\String\PalindromePairs.cs" />
+    <Compile Include="IK\String\SinusoidalPrint.cs" />
     <Compile Include="IK\String\WordsIndices.cs" />
     <Compile Include="IK\Graph\ZombieClusters.cs" />
     <Compile Include="IK\LinkedList\AlternativeNodeSplit.cs" />

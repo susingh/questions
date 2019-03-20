@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Questions.IK.Graph
 {
+    /// <summary>
+    /// You are given a text string and q words. For all q words, You need to find out all words from text string which are matching with given word.
+    /// </summary>
     class WordsIndices
     {
         public static List<List<int>> find_words(string text, List<string> words)

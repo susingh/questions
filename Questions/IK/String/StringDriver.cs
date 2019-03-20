@@ -18,7 +18,16 @@ namespace Questions.IK.String
                  // = new PrefixTree();
                  // = SubstringSearch.FindMatch("aaaaaab", "a");
                  // = Neuronyms_IK.neuronyms("nailed");
-                 = ShortestSubstringContainingSet.FindSubstring("AYZABOBECODXBANC", new char[] { 'A', 'B', 'C' });
+                 // = ShortestSubstringContainingSet.FindSubstring("AYZABOBECODXBANC", new char[] { 'A', 'B', 'C' });
+                 = LongestPalindromeSubstring.FindSubString("abcacdcacdddddddd");
+                 //= BoggleSolver.findWords(new string[] { "oath", "pea", "eat", "rain" }, new char[][]
+                 //{
+                 //    new char[] { 'o', 'a', 'a', 'n' },
+                 //    new char[] { 'e', 't', 'a', 'e' },
+                 //    new char[] { 'i', 'h', 'k', 'r' },
+                 //    new char[] { 'i', 'f', 'l', 'v' }
+                 //});
+                 // = LongestSubstringWith2DistinctChars.getLongestSubstringLengthExactly2DistinctChars("baabcbab");
 
             //sol.Add("CAT");
             //sol.Add("DOLL");

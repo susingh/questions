@@ -30,7 +30,7 @@ namespace Questions.IK.DP_
         private static int maxStolenValueRecursive(int[] values)
         {
             int maxValue = int.MinValue;
-            for (int i = 0; i < values.Length; i++)
+            for (int i = 0; i < values.Length; i++) // N
             {
                 int value = maxStolenValueRecursive(values, i);
                 maxValue = Math.Max(maxValue, value);
@@ -45,35 +45,38 @@ namespace Questions.IK.DP_
                 return 0;
             }
 
-            // skip the adjacent house on the right
-            int rightIndex = i + 2;
-            
             int maxRightValue = 0;
-            while (rightIndex < values.Length)
+            for (int k = i + 2; k < values.Length; k++) // N
             {
-                Console.WriteLine("Calculating max right value for index " + rightIndex);
-                int rightValue = maxStolenValueRecursive(values, rightIndex);
-                rightIndex++;
+                int rightValue = maxStolenValueRecursive(values, k);
                 maxRightValue = Math.Max(maxRightValue, rightValue);
             }
+
+            //while (rightIndex < values.Length)
+            //{
+            //    Console.WriteLine("Calculating max right value for index " + rightIndex);
+            //    int rightValue = maxStolenValueRecursive(values, rightIndex);
+            //    rightIndex++;
+                
+            //}
 
             return maxRightValue + values[i];
         }
 
         private static int maxStolenValueDP(int[] values)
         {
-            int[] dpTable = new int[values.Length];
+            int[] dpTable = new int[values.Length + 1];
+            dpTable[values.Length] = 0;
+
             dpTable[values.Length - 1] = values[values.Length - 1];
 
             for (int i = dpTable.Length - 2; i >= 0; i--)
             {
-                int rightIndex = i + 2;
                 int maxRightValue = 0;
-                while (rightIndex < values.Length)
+                for (int k = i + 2; k < values.Length; k++) // N
                 {
-                    int rightValue = dpTable[rightIndex];
+                    int rightValue = dpTable[k];
                     maxRightValue = Math.Max(maxRightValue, rightValue);
-                    rightIndex++;
                 }
 
                 dpTable[i] = maxRightValue + values[i];
