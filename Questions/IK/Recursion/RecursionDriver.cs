@@ -11,7 +11,9 @@
                 // = TargetSum.check_if_sum_possible(new long[] { 1 }, 0);
                 // = Expressions.generate_all_expressions("222", 24);
                 // = NumberOfBSTs.how_many_BSTs(5);
-                = CountBST.Count_BST(3);
+                //= CountBST.Count_BST(3);
+                // = RoundTotal.RoundTotalMain(new double[] { 0.7, 2.8, 4.9 });
+                = Encoder.FindEncodingTypes("111");
         }
     }
 }

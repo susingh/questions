@@ -1,4 +1,5 @@
 ﻿using Questions.IK;
+using Questions.IK.Adhoc_;
 using Questions.IK.Graph;
 using Questions.IK.String;
 using Questions.IK.Tree;
@@ -97,7 +98,7 @@ namespace Questions
                 // = new LinkedListDriver();
                 //= new LinkedListDriverGFG();
                 // = new SortingDriverGFG();
-                //= new IK.Recursion.RecursionDriver();
+                 = new IK.Recursion.RecursionDriver();
                 // = new Trees();
                 // = new DP();
                 //= new Graphs();
@@ -108,9 +109,9 @@ namespace Questions
                 // = new ReaderWriterLockDriver();
                 // = new BoundedHashSetDriver();
                 // = new GraphDriver();
-                = new StringDriver();
-                // = new AdhocDriver();
-                // = new TreeDriver();
+                 //= new StringDriver();
+                //= new   AdhocDriver();
+                 // = new TreeDriver();
                 // = new BitDriver();
                 // = new MathDriver();
                 // = new DPDriver();

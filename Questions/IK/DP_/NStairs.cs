@@ -10,6 +10,7 @@ namespace Questions.IK.DP_
     {
         public static int countWaysToClimb(int[] steps, int n)
         {
+            return -1;
         }
 
         public static int countWaysToClimbRecurse(int i, int[] steps, int n)

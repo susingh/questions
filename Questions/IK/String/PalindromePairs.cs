@@ -67,7 +67,7 @@ namespace Questions.IK.String
 
         private static int FindMatch(TrieNode trie, string word)
         {
-            return false;
+            return -1;
         }
 
         private static void Insert (TrieNode root, string word)

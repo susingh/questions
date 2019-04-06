@@ -60,7 +60,15 @@ namespace Questions.IK
                 // = SortCharacters.sortCharacters("This is easy");
                 // = NearestNeighbors.find_nearest_neighbours(3, 1, points, 3);
                 // QuickSort.Sort(new int[] { 9, 1, 10, 2, 11, 3, 7, 6, 8 });
-                = KRank.FindRankK(new int[] { 7, 10, 4, 3, 20, 15 }, 3);
+                // = KRank.FindRankK(new int[] { 7, 10, 4, 3, 20, 15 }, 3);
+                = LexigraphicalOrdering.solve(new string[]
+                {
+                    "key1 abcd",
+                    "key2 zzz",
+                    "key1 hello",
+                    "key3 world",
+                    "key1 hello"
+                });
         }
     }
 }

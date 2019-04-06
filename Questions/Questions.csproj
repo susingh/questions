@@ -90,9 +90,15 @@
     <Compile Include="GFG\String\ZigZag.cs" />
     <Compile Include="IK\Adhoc.cs" />
     <Compile Include="IK\Adhoc_\AdhocDriver.cs" />
+    <Compile Include="IK\Adhoc_\AlternatingPositiveNegatives.cs" />
+    <Compile Include="IK\Adhoc_\FindSkyline.cs" />
+    <Compile Include="IK\Adhoc_\HammingWeight.cs" />
     <Compile Include="IK\Adhoc_\Histogram.cs" />
     <Compile Include="IK\Adhoc_\MaxSubArray.cs" />
+    <Compile Include="IK\Adhoc_\MaxSubarrayWindow.cs" />
     <Compile Include="IK\Adhoc_\MaxSubsetSum.cs" />
+    <Compile Include="IK\Adhoc_\MinRotatedSortedArray.cs" />
+    <Compile Include="IK\Adhoc_\NextPalindrome.cs" />
     <Compile Include="IK\Adhoc_\PrimeNumbers.cs" />
     <Compile Include="IK\Adhoc_\SumZero.cs" />
     <Compile Include="IK\Concurrency\BoundedHashset.cs" />
@@ -125,6 +131,10 @@
     <Compile Include="IK\Graph\LongestPath.cs" />
     <Compile Include="IK\Graph\StringTransformation.cs" />
     <Compile Include="IK\Graph\TopologicalSort.cs" />
+    <Compile Include="IK\Recursion\Encoder.cs" />
+    <Compile Include="IK\Recursion\RoundTotal.cs" />
+    <Compile Include="IK\Sorting\LexigraphicalOrdering.cs" />
+    <Compile Include="IK\String\Atoi.cs" />
     <Compile Include="IK\String\BoggleSolver.cs" />
     <Compile Include="IK\String\LongestPalindromeSubstring.cs" />
     <Compile Include="IK\String\LongestSubstringWith2DistinctChars.cs" />
@@ -174,6 +184,7 @@
     <Compile Include="IK\String\ShortestSubstringContainingSet.cs" />
     <Compile Include="IK\String\SubstringSearch.cs" />
     <Compile Include="IK\Tree\KthSmallest.cs" />
+    <Compile Include="IK\Tree\LargestBST.cs" />
     <Compile Include="IK\Tree\NumberOfBSTs.cs" />
     <Compile Include="IK\Recursion\RecursionDriver.cs" />
     <Compile Include="IK\Recursion\TargetSum.cs" />
@@ -193,7 +204,9 @@
     <Compile Include="IK\Trees.cs" />
     <Compile Include="IK\Tree\IsBST.cs" />
     <Compile Include="IK\Tree\PostOrderWithoutRecursion.cs" />
+    <Compile Include="IK\Tree\Serialize.cs" />
     <Compile Include="IK\Tree\TreeDriver.cs" />
+    <Compile Include="IK\Tree\UnivalTree.cs" />
     <Compile Include="IK\Tree\UpsideDown.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="LeetCode\AddTwoNumbers.cs" />

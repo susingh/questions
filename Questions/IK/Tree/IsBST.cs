@@ -54,7 +54,7 @@ namespace Questions.IK.Tree
             if (root.val >= max || root.val <= min)
                 return false;
 
-            return isBSTRecursive(root.left, min, root.val) && isBSTRecursive(root.right, root.val, max);
+            return isBSTRecursive(root.left, min, root.val) && isBSTRecursive(root.right, root.val + 1, max);
         }
     }
 }

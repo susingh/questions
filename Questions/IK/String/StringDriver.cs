@@ -19,7 +19,8 @@ namespace Questions.IK.String
                  // = SubstringSearch.FindMatch("aaaaaab", "a");
                  // = Neuronyms_IK.neuronyms("nailed");
                  // = ShortestSubstringContainingSet.FindSubstring("AYZABOBECODXBANC", new char[] { 'A', 'B', 'C' });
-                 = LongestPalindromeSubstring.FindSubString("abcacdcacdddddddd");
+                 // = LongestPalindromeSubstring.FindSubString("abcacdcacdddddddd");
+                 = Atoi.MyAtoi("words and 987");
                  //= BoggleSolver.findWords(new string[] { "oath", "pea", "eat", "rain" }, new char[][]
                  //{
                  //    new char[] { 'o', 'a', 'a', 'n' },
