@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,15 @@ namespace Questions.IK.LinkedList
 {
     class MiddleNode
     {
-        public static LinkedListNode find_middle_node(LinkedListNode head)
+        public static ListNode find_middle_node(ListNode head)
         {
             if (head == null)
             {
                 return head;
             }
 
-            LinkedListNode slow = head;
-            LinkedListNode fast = head;
+            ListNode slow = head;
+            ListNode fast = head;
 
             while (fast.next != null && fast.next.next != null)
             {

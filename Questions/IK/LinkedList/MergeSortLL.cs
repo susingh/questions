@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Questions.Models;
 
 namespace Questions.IK.LinkedList
 {
@@ -11,14 +7,14 @@ namespace Questions.IK.LinkedList
         // split the LL
         // sort them separately,
         // merge them.
-
-        public static LinkedListNode mergeSortList(LinkedListNode pList)
+    
+        public static ListNode MergeSort(ListNode pList)
         {
             int length = GetLength(pList);
             return mergeSortListRecursive(pList, length);
         }
 
-        private static LinkedListNode mergeSortListRecursive(LinkedListNode head, int length)
+        private static ListNode mergeSortListRecursive(ListNode head, int length)
         {
             // base case
             if (length == 0 || length == 1)
@@ -27,8 +23,8 @@ namespace Questions.IK.LinkedList
             }
 
             int mid = length / 2;
-            LinkedListNode prev = null;
-            LinkedListNode curr = head;
+            ListNode prev = null;
+            ListNode curr = head;
 
             for (int i = 0; i < mid; i++)
             {
@@ -44,30 +40,41 @@ namespace Questions.IK.LinkedList
             return merge(node1, node2);
         }
 
-        private static LinkedListNode merge(LinkedListNode head1, LinkedListNode head2)
+        private static ListNode merge(ListNode l1, ListNode l2)
         {
-            LinkedListNode curr1 = head1;
-            LinkedListNode curr2 = head2;
+            ListNode head = new ListNode();
+            ListNode curr = head;
 
-            while (curr1 != null && curr2 != null)
+            while (l1 != null && l2 != null)
             {
+                if (l2.val < l1.val)
+                {
+                    curr.next = l2;
+                    l2 = l2.next;
+                }
+                else
+                {
+                    curr.next = l1;
+                    l1 = l1.next;
+                }
 
+                curr = curr.next;
             }
 
-            while (curr1 != null)
+            if (l1 != null)
             {
-
+                curr.next = l1;
             }
 
-            while(curr2 != null)
+            if (l2 != null)
             {
-
+                curr.next = l2;
             }
 
-            return null;
+            return head.next;
         }
 
-        private static int GetLength(LinkedListNode head)
+        private static int GetLength(ListNode head)
         {
             var curr = head;
             int count = 0;

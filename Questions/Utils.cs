@@ -30,7 +30,7 @@ namespace Questions
 
             while (current != null)
             {
-                Console.Write(current.value);
+                Console.Write(current.val);
                 Console.Write("->");
 
                 current = current.next;
@@ -42,6 +42,19 @@ namespace Questions
             T temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
+        }
+
+        public static ListNode BuildList(int[] arr)
+        {
+            ListNode head = new ListNode(-1);
+            ListNode curr = head;
+
+            foreach (var item in arr)
+            {
+                curr.next = new ListNode(item);
+                curr = curr.next;
+            }
+            return head.next;
         }
     }
 }

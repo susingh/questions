@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,13 @@ namespace Questions.IK.LinkedList
 {
     class RearrangeLL
     {
-        public static LinkedListNode Rearrange(LinkedListNode head)
+        public static ListNode Rearrange(ListNode head)
         {
-            LinkedListNode evenHead = new LinkedListNode();
-            LinkedListNode oddHead = new LinkedListNode();
+            ListNode evenHead = new ListNode();
+            ListNode oddHead = new ListNode();
 
-            LinkedListNode currEven = evenHead;
-            LinkedListNode currOdd = oddHead;
+            ListNode currEven = evenHead;
+            ListNode currOdd = oddHead;
 
             while (head != null)
             {

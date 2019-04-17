@@ -1,4 +1,5 @@
 ﻿using Questions.IK.LinkedList;
+using Questions.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Questions.GFG.LL
 {
     class MergeListsAlternatingly
     {
-        public static void MergeList(LinkedListNode l1, LinkedListNode l2)
+        public static void MergeList(ListNode l1, ListNode l2)
         {
             if (l2 == null || l1 == null)
                 return;

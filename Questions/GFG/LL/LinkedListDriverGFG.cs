@@ -1,4 +1,5 @@
 ﻿using Questions.IK.LinkedList;
+using Questions.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +12,19 @@ namespace Questions.GFG.LL
     {
         public void Run()
         {
-            LinkedListNode l1 = new LinkedListNode
+            ListNode l1 = new ListNode
             {
                 val = 5,
-                next = new LinkedListNode
+                next = new ListNode
                 {
                     val = 6,
-                    next = new LinkedListNode
+                    next = new ListNode
                     {
                         val = 3,
-                        next = new LinkedListNode
+                        next = new ListNode
                         {
                             val = 1,
-                            next = new LinkedListNode
+                            next = new ListNode
                             {
                                 val = 2
                             }
@@ -32,16 +33,16 @@ namespace Questions.GFG.LL
                 }
             };
 
-            LinkedListNode l2 = new LinkedListNode
+            ListNode l2 = new ListNode
             {
                 val = 8,
-                next = new LinkedListNode
+                next = new ListNode
                 {
                     val = 4,
-                    next = new LinkedListNode
+                    next = new ListNode
                     {
                         val = 2,
-                        next = new LinkedListNode
+                        next = new ListNode
                         {
                             val = 1
                         }

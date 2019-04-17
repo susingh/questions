@@ -1,4 +1,6 @@
-﻿namespace Questions.IK.Tree
+﻿using System.Collections.Generic;
+
+namespace Questions.IK.Tree
 {
     class TreeDriver : IQuestion
     {
@@ -29,7 +31,8 @@
                  // = UpsideDown.flipUpsideDown(root);
                  // = LargestBST.FindLargestBST(root);
                  // = Serialize.SerializeBT(root);
-                 = UnivalTree.FindUnivalTrees(root);
+                 // = UnivalTree.FindUnivalTrees(root);
+                 = ConstructTree.ConstructBinaryTree(new List<int> { 3, 2, 1, 5, 4, 6 }, new List<int> { 1, 2, 3, 4, 5, 6 });
 
             //var node = Serialize.DeserializeCompleteBT(sol);
 

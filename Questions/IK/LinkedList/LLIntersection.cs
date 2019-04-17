@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,10 @@ namespace Questions.IK.LinkedList
 {
     public class LLIntersection
     {
-        public static int find_intersection(LinkedListNode l1, LinkedListNode l2)
+        public static int find_intersection(ListNode l1, ListNode l2)
         {
-            LinkedListNode l1Curr = l1;
-            LinkedListNode l2Curr = l2;
+            ListNode l1Curr = l1;
+            ListNode l2Curr = l2;
 
             if (l1Curr == null || l2Curr == null)
             {

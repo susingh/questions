@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,10 @@ namespace Questions.IK.LinkedList
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        public static bool hasCycle(LinkedListNode node)
+        public static bool hasCycle(ListNode node)
         {
-            LinkedListNode fast = node;
-            LinkedListNode slow = node;
+            ListNode fast = node;
+            ListNode slow = node;
 
             while (fast != null && fast.next != null)
             {
@@ -37,10 +38,10 @@ namespace Questions.IK.LinkedList
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        public static int countCycle(LinkedListNode node)
+        public static int countCycle(ListNode node)
         {
-            LinkedListNode fast = node;
-            LinkedListNode slow = node;
+            ListNode fast = node;
+            ListNode slow = node;
 
             while (fast != null && fast.next != null)
             {
@@ -75,10 +76,10 @@ namespace Questions.IK.LinkedList
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        public static LinkedListNode firstNodeCycle(LinkedListNode node)
+        public static ListNode firstNodeCycle(ListNode node)
         {
-            LinkedListNode fast = node;
-            LinkedListNode slow = node;
+            ListNode fast = node;
+            ListNode slow = node;
 
             while (fast != null && fast.next != null)
             {

@@ -1,4 +1,5 @@
 ﻿using Questions.IK.LinkedList;
+using Questions.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +10,17 @@ namespace Questions.GFG.LL
 {
     class MergeSortLL
     {
-        public static void Sort(LinkedListNode root)
+        public static void Sort(ListNode root)
         {
             Sort(ref root);
         }
-        private static void Sort(ref LinkedListNode root)
+        private static void Sort(ref ListNode root)
         {
             if (root == null || root.next == null)
                 return;
 
-            LinkedListNode a = null;
-            LinkedListNode b = null;
+            ListNode a = null;
+            ListNode b = null;
             SplitList(root, ref a, ref b);
 
             Sort(ref a);
@@ -27,7 +28,7 @@ namespace Questions.GFG.LL
             root = Merge(a, b);
         }
 
-        private static void SplitList(LinkedListNode root, ref LinkedListNode a, ref LinkedListNode b)
+        private static void SplitList(ListNode root, ref ListNode a, ref ListNode b)
         {
             if (root == null)
                 return;
@@ -47,18 +48,18 @@ namespace Questions.GFG.LL
             slow.next = null;
         }
 
-        private static LinkedListNode Merge(LinkedListNode a, LinkedListNode b)
+        private static ListNode Merge(ListNode a, ListNode b)
         {
             if (a == null && b == null)
                 return null;
 
-            LinkedListNode result = new LinkedListNode();
-            LinkedListNode curr = result;
+            ListNode result = new ListNode();
+            ListNode curr = result;
 			while (a != null && b != null)
 			{
 				if (a.val > b.val)
                 {
-                    curr.next = new LinkedListNode
+                    curr.next = new ListNode
                     {
                         val = b.val
                     };
@@ -67,7 +68,7 @@ namespace Questions.GFG.LL
                 }
 				else
                 {
-                    curr.next = new LinkedListNode
+                    curr.next = new ListNode
                     {
                         val = a.val
                     };
@@ -80,7 +81,7 @@ namespace Questions.GFG.LL
 
 			while (a != null)
             {
-                curr.next = new LinkedListNode
+                curr.next = new ListNode
                 {
                     val = a.val
                 };
@@ -91,7 +92,7 @@ namespace Questions.GFG.LL
 
             while(b != null)
             {
-                curr.next = new LinkedListNode
+                curr.next = new ListNode
                 {
                     val = b.val
                 };

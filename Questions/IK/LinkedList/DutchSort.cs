@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,34 +15,34 @@ namespace Questions.IK.LinkedList
     {
         private class LinkedListContainer
         {
-            LinkedListNode head = null;
-            LinkedListNode tail = null;
+            ListNode head = null;
+            ListNode tail = null;
 
             public LinkedListContainer()
             {
                 // [Improvement] : Using sentinal nodes to simplify adding a new node.
-                head = new LinkedListNode();
+                head = new ListNode();
                 tail = head;
             }
 
-            public void Add(LinkedListNode node)
+            public void Add(ListNode node)
             {
                 tail.next = node;
                 tail = node;
             }
 
-            public LinkedListNode GetHead()
+            public ListNode GetHead()
             {
                 return head.next;
             }
 
-            public LinkedListNode GetTail()
+            public ListNode GetTail()
             {
                 return tail;
             }
         }
 
-        public static LinkedListNode Sort(LinkedListNode head, int k)
+        public static ListNode Sort(ListNode head, int k)
         {
             LinkedListContainer smaller = new LinkedListContainer();
             LinkedListContainer same = new LinkedListContainer();

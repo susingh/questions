@@ -14,12 +14,12 @@ namespace Questions.Models
 
     public class ListNode
     {
-        public int value;
+        public int val;
         public ListNode next;
 
         public ListNode() { }
 
-        public ListNode(int value) { this.value = value; }
+        public ListNode(int value) { this.val = value; }
 
     }
 }

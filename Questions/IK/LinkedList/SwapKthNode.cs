@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,15 @@ namespace Questions.IK.LinkedList
 {
     class SwapKthNode
     {
-        public static LinkedListNode swap_nodes(LinkedListNode head, int k)
+        public static ListNode swap_nodes(ListNode head, int k)
         {
             if (head == null || k <= 0)
             {
                 return head;
             }
 
-            LinkedListNode curr = head;
-            LinkedListNode prev1 = null;
+            ListNode curr = head;
+            ListNode prev1 = null;
             int counter = 1;
 
             while (curr != null && ++counter <= k)
@@ -25,10 +26,10 @@ namespace Questions.IK.LinkedList
                 curr = curr.next;
             }
 
-            LinkedListNode a = curr;
+            ListNode a = curr;
 
-            LinkedListNode b = head;
-            LinkedListNode prev2 = null;
+            ListNode b = head;
+            ListNode prev2 = null;
 
             while (curr != null && curr.next != null)
             {
@@ -60,7 +61,7 @@ namespace Questions.IK.LinkedList
                 prev2.next = a;
             }
 
-            LinkedListNode temp = a.next;
+            ListNode temp = a.next;
             a.next = b.next;
             b.next = temp;
 

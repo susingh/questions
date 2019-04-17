@@ -1,4 +1,5 @@
 ﻿using Questions.IK.LinkedList;
+using Questions.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,14 @@ namespace Questions.GFG.LL
 {
     class AddTwoNumbers
     {
-        public static LinkedListNode Sum(LinkedListNode list1, LinkedListNode list2)
+        public static ListNode Sum(ListNode list1, ListNode list2)
         {
             var a = GetNumber(list1);
             var b = GetNumber(list2);
             return BuildList(a + b);
         }
     
-        private static int GetNumber(LinkedListNode node)
+        private static int GetNumber(ListNode node)
         {
             var curr = node;
             int result = 0;
@@ -30,7 +31,7 @@ namespace Questions.GFG.LL
             return result;
         }
 
-        private static LinkedListNode BuildList(int num)
+        private static ListNode BuildList(int num)
         {
             Stack<int> stack = new Stack<int>();
             while (num > 0)
@@ -40,13 +41,13 @@ namespace Questions.GFG.LL
                 num = num / 10;
             }
 
-            LinkedListNode head = new LinkedListNode();
-            LinkedListNode curr = head;
+            ListNode head = new ListNode();
+            ListNode curr = head;
 
             while (stack.Count > 0)
             {
                 int digit = stack.Pop();
-                curr.next = new LinkedListNode()
+                curr.next = new ListNode()
                 {
                     val = digit
                 };

@@ -131,6 +131,10 @@
     <Compile Include="IK\Graph\LongestPath.cs" />
     <Compile Include="IK\Graph\StringTransformation.cs" />
     <Compile Include="IK\Graph\TopologicalSort.cs" />
+    <Compile Include="IK\LinkedList\AddTwoNumbers.cs" />
+    <Compile Include="IK\LinkedList\Partition.cs" />
+    <Compile Include="IK\LinkedList\ReverseInGroups.cs" />
+    <Compile Include="IK\LinkedList\ValidExpression.cs" />
     <Compile Include="IK\Recursion\Encoder.cs" />
     <Compile Include="IK\Recursion\RoundTotal.cs" />
     <Compile Include="IK\Sorting\LexigraphicalOrdering.cs" />
@@ -149,7 +153,6 @@
     <Compile Include="IK\LinkedList\FindMedian.cs" />
     <Compile Include="IK\LinkedList\FlattenLL.cs" />
     <Compile Include="IK\LinkedList\LinkedListDriver.cs" />
-    <Compile Include="IK\LinkedList\LinkedListNode.cs" />
     <Compile Include="IK\LinkedList\LLIntersection.cs" />
     <Compile Include="IK\LinkedList\LRUCache.cs" />
     <Compile Include="IK\LinkedList\MaxNumberInSlidingWindow.cs" />
@@ -183,6 +186,7 @@
     <Compile Include="IK\String\Neuronyms.cs" />
     <Compile Include="IK\String\ShortestSubstringContainingSet.cs" />
     <Compile Include="IK\String\SubstringSearch.cs" />
+    <Compile Include="IK\Tree\ConstructTree.cs" />
     <Compile Include="IK\Tree\KthSmallest.cs" />
     <Compile Include="IK\Tree\LargestBST.cs" />
     <Compile Include="IK\Tree\NumberOfBSTs.cs" />

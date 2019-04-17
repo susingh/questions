@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Questions.IK.LinkedList
 {
     class AlternativeNodeSplit
     {
-        public static void alternativeSplit(LinkedListNode pList)
+        public static void alternativeSplit(ListNode pList)
         {
             if (pList == null)
             {
@@ -16,10 +17,10 @@ namespace Questions.IK.LinkedList
             }
             
             // dummy node
-            LinkedListNode head2 = new LinkedListNode();
+            ListNode head2 = new ListNode();
 
-            LinkedListNode curr1 = pList;
-            LinkedListNode curr2 = head2;
+            ListNode curr1 = pList;
+            ListNode curr2 = head2;
 
             while (curr1 != null && curr1.next != null)
             {
@@ -39,9 +40,9 @@ namespace Questions.IK.LinkedList
             Print(head2);
         }
 
-        static void Print(LinkedListNode head)
+        static void Print(ListNode head)
         {
-            LinkedListNode curr = head;
+            ListNode curr = head;
             List<int> values = new List<int>();
             while (curr != null)
             {

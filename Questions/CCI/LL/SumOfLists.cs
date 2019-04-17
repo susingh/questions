@@ -27,7 +27,7 @@ namespace Questions.CCI
             while (true)
             {
                 int value = num % 10;
-                curr.value = value;
+                curr.val = value;
                 num = num / 10;
 
                 if (num > 0)
@@ -60,7 +60,7 @@ namespace Questions.CCI
             while (true)
             {
                 int value = stack.Pop();
-                curr.value = value;
+                curr.val = value;
 
                 if (stack.Any())
                 {
@@ -84,7 +84,7 @@ namespace Questions.CCI
 
             while (curr != null)
             {
-                num += curr.value * (int)Math.Pow(10, power);
+                num += curr.val * (int)Math.Pow(10, power);
                 curr = curr.next;
                 power++;
             }
@@ -101,7 +101,7 @@ namespace Questions.CCI
             Stack<int> stack = new Stack<int>();
             while (curr != null)
             {
-                stack.Push(curr.value);
+                stack.Push(curr.val);
                 curr = curr.next;
             }
 

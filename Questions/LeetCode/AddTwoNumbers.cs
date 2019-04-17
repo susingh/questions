@@ -17,7 +17,7 @@ namespace Questions.LeetCode
             ListNode curr = a;
             while (curr != null)
             {
-                num1 += curr.value * (int)Math.Pow(10, power++);
+                num1 += curr.val * (int)Math.Pow(10, power++);
                 curr = curr.next;
             }
 
@@ -25,7 +25,7 @@ namespace Questions.LeetCode
             curr = b;
             while (curr != null)
             {
-                num2 += curr.value * (int)Math.Pow(10, power++);
+                num2 += curr.val * (int)Math.Pow(10, power++);
                 curr = curr.next;
             }
 
@@ -37,7 +37,7 @@ namespace Questions.LeetCode
             while (true)
             {
                 int digit = sum % 10;
-                curr.value = digit;
+                curr.val = digit;
 
                 sum = sum / 10;
 
@@ -59,26 +59,26 @@ namespace Questions.LeetCode
         {
             var num1 = new ListNode
             {
-                value = 2,
+                val = 2,
                 next = new ListNode
                 {
-                    value = 4,
+                    val = 4,
                     next = new ListNode
                     {
-                        value = 3
+                        val = 3
                     }
                 }
             };
 
             var num2 = new ListNode
             {
-                value = 5,
+                val = 5,
                 next = new ListNode
                 {
-                    value = 6,
+                    val = 6,
                     next = new ListNode
                     {
-                        value = 4
+                        val = 4
                     }
                 }
             };

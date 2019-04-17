@@ -25,7 +25,8 @@ namespace Questions.IK.Adhoc_
                 // = PrimeNumbers.detect_primes(new int[] { 6, 2, 5, 8 });
                 //= HammingWeight.Weight(new List<long> { 1, 2, 3 });
                 // = FindSkyline.Find_skyline(buildings);
-                = AlternatingPositiveNegatives.alternating_positives_and_negatives(new int[] { 2, 3, -4, -9, -1, -7, 1, -5, -6 });
+                // = AlternatingPositiveNegatives.alternating_positives_and_negatives(new int[] { 2, 3, -4, -9, -1, -7, 1, -5, -6 });
+                = NextPalindrome.next_palindrome(192);
         }
     }
 }

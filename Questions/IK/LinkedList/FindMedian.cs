@@ -1,10 +1,12 @@
-﻿namespace Questions.IK.LinkedList
+﻿using Questions.Models;
+
+namespace Questions.IK.LinkedList
 {
     public class FindMedian
     {
-        public static int find_median(LinkedListNode ptr)
+        public static int find_median(ListNode ptr)
         {
-            LinkedListNode curr = ptr;
+            ListNode curr = ptr;
             int count = 1;
 
             // calculate the number of nodes in the list and find the start of the list
@@ -28,7 +30,7 @@
 
             curr = ptr;
             bool isAscending = ascNodes > descNodes;
-            LinkedListNode start = curr;
+            ListNode start = curr;
             while (curr.next != ptr)
             {
                 if (isAscending && curr.val > curr.next.val)
@@ -43,8 +45,8 @@
                 curr = curr.next;
             }
 
-            LinkedListNode slow = start;
-            LinkedListNode fast = start;
+            ListNode slow = start;
+            ListNode fast = start;
 
             while (fast.next != start && fast.next.next != start)
             {
