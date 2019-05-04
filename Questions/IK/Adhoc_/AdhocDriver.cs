@@ -26,7 +26,16 @@ namespace Questions.IK.Adhoc_
                 //= HammingWeight.Weight(new List<long> { 1, 2, 3 });
                 // = FindSkyline.Find_skyline(buildings);
                 // = AlternatingPositiveNegatives.alternating_positives_and_negatives(new int[] { 2, 3, -4, -9, -1, -7, 1, -5, -6 });
-                = NextPalindrome.next_palindrome(192);
+                // = NextPalindrome.next_palindrome(192);
+                //= MergeOverappingIntervals.getMergedIntervals(new int[][]
+                //{
+                //    new int[] { 1, 3 },
+                //    new int[] { 5, 7 },
+                //    new int[] { 2, 4 },
+                //    new int[] { 6, 8 },
+                //});
+                // = MinRotatedSortedArray.FindMin(new int[] { 7, 8, 1, 2, 3, 4, 5, 6 });
+                = string.Empty; MoveZeros.MoveZeroes(new int[] { 0, 1, 3, 0, 12 });
         }
     }
 }

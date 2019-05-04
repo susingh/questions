@@ -97,7 +97,9 @@
     <Compile Include="IK\Adhoc_\MaxSubArray.cs" />
     <Compile Include="IK\Adhoc_\MaxSubarrayWindow.cs" />
     <Compile Include="IK\Adhoc_\MaxSubsetSum.cs" />
+    <Compile Include="IK\Adhoc_\MergeOverappingIntervals.cs" />
     <Compile Include="IK\Adhoc_\MinRotatedSortedArray.cs" />
+    <Compile Include="IK\Adhoc_\MoveZeros.cs" />
     <Compile Include="IK\Adhoc_\NextPalindrome.cs" />
     <Compile Include="IK\Adhoc_\PrimeNumbers.cs" />
     <Compile Include="IK\Adhoc_\SumZero.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="IK\DP_\CoinPlay.cs" />
     <Compile Include="IK\DP_\CutRope.cs" />
     <Compile Include="IK\DP_\DPDriver.cs" />
+    <Compile Include="IK\DP_\Knapsack.cs" />
     <Compile Include="IK\DP_\KnightsTour.cs" />
     <Compile Include="IK\DP_\Levenshtein.cs" />
     <Compile Include="IK\DP_\MaxPath.cs" />
@@ -137,6 +140,7 @@
     <Compile Include="IK\LinkedList\ValidExpression.cs" />
     <Compile Include="IK\Recursion\Encoder.cs" />
     <Compile Include="IK\Recursion\RoundTotal.cs" />
+    <Compile Include="IK\DP_\TestForTie.cs" />
     <Compile Include="IK\Sorting\LexigraphicalOrdering.cs" />
     <Compile Include="IK\String\Atoi.cs" />
     <Compile Include="IK\String\BoggleSolver.cs" />
@@ -182,7 +186,6 @@
     <Compile Include="IK\Sorting\SortCharacters.cs" />
     <Compile Include="IK\Sorting\SortedSets.cs" />
     <Compile Include="IK\Sorting\StreamMedian.cs" />
-    <Compile Include="IK\String\LongestRepeatedSubstring.cs" />
     <Compile Include="IK\String\Neuronyms.cs" />
     <Compile Include="IK\String\ShortestSubstringContainingSet.cs" />
     <Compile Include="IK\String\SubstringSearch.cs" />
@@ -202,7 +205,7 @@
     <Compile Include="IK\Sorting\SortingDriver.cs" />
     <Compile Include="IK\StreamOfInt.cs" />
     <Compile Include="IK\Strings.cs" />
-    <Compile Include="IK\String\LongestSubstring.cs" />
+    <Compile Include="IK\String\LongestRepeatedSubstring.cs" />
     <Compile Include="IK\String\PatternMatch.cs" />
     <Compile Include="IK\String\StringDriver.cs" />
     <Compile Include="IK\Trees.cs" />

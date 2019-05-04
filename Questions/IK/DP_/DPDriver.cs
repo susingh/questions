@@ -30,9 +30,9 @@ namespace Questions.IK.DP_
                 // = CoinChange.Coin_Change(8, new int[] { 2, 3, 5 });
                 // = Robbery.maxStolenValue(new int[] { 8, 9, 9, 10, 5, 7, 3, 9, 2, 5 });
                 // = Robbery.maxStolenValue(new int[] { 1, 6, 4, 5, 9});
-                = KnightsTour.numPhoneNumbers(1, 2);
-
-
+                // = KnightsTour.numPhoneNumbers(1, 2);
+                // = CoinPlay.maxWin(new int[] { 8, 15, 3, 7 });
+                = Knapsack.FindMaxValue(new int[] { 5, 12, 6, 4 }, new int[] { 3, 10, 14, 1 }, 15);
         }
     }
 }

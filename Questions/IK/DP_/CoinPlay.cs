@@ -10,7 +10,8 @@ namespace Questions.IK.DP_
     {
         public static int maxWin(int[] v)
         {
-            return maxWin(0, v.Length - 1, v);
+            //return maxWin(0, v.Length - 1, v);
+            return maxWinDP(v);
         }
 
         private static int maxWin(int i, int j, int[] v)
@@ -26,26 +27,18 @@ namespace Questions.IK.DP_
 
         private static int maxWinDP(int[] v)
         {
-            int[,] dp = new int[v.Length, v.Length];
-            for (int i = 0; i < v.Length; i++)
+            int[,] dp = new int[v.Length + 2, v.Length + 2];
+
+            for (int i = v.Length - 1; i >= 0; i--)
             {
-                for (int j = 0; j < v.Length; j++)
+                for (int j = 2; j < v.Length + 2; j++)
                 {
                     if (i > j)
-                    {
-                        dp[i, j] = 0;
-                    }
-                }
-            }
+                        continue;
 
-            for (int i = 0; i < v.Length; i++)
-            {
-                for (int j = 0; j < v.Length; j++)
-                {
-                    int leftMove = v[i] + Math.Min(dp[i + 2, j], dp[i + 1, j - 1]);
-                    int rightMove = v[j] + Math.Min(dp[i, j - 2], dp[i + 1, j - 1]);
-
-                    dp[i, j] = Math.Max(leftMove, rightMove);
+                    int left = v[i] + Math.Min(dp[i + 2, j], dp[i + 1, j - 1]);
+                    int right = v[j] + Math.Min(dp[i + 1, j - 1], dp[i, j - 2]);
+                    dp[i, j] = Math.Max(left, right);
                 }
             }
 

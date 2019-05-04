@@ -1,94 +1,129 @@
 ﻿using Questions.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Questions.IK.String
 {
-    class RepeatedResult
+    class LongestRepeatedSubstring
     {
-        public int Count;
-        public string LongestString;
-    }
-
-    public class LongestRepeatedSubstring
-    {
-        public static string FindString(string input)
+        public static string LRS(string iString)
         {
-            // O(N^2)
-            TrieNode root = BuildTrie(input);
+            //return LRS_BruteForce(iString);
+            return LRS_SuffixTrees(iString);
+        }
 
-            // O(N^2)
+        private static string LRS_SuffixTrees(string iString)
+        {
+            TrieNode root = BuildTree(iString);
             Stack<char> path = new Stack<char>();
-            RepeatedResult result = new RepeatedResult();
-            foreach (var item in root.Children)
-            {
-                path.Push(item.Key);
-                FindStringDfs(item.Value, path);
-                path.Pop();
-            }
-            
-            return result.LongestString;
-        }
-
-        private static string GetPath(Stack<char> path)
-        {
-            var arr = path.ToArray();
-            Array.Reverse(arr);
-            return new string(arr);
-        }
-
-        private static RepeatedResult FindStringDfs(TrieNode root, Stack<char> path)
-        {
-            // base case
-            if (root.Children.Count == 0 && root.isEOW)
-            {
-                return new RepeatedResult { Count = 1, LongestString = GetPath(path) };
-            }
-           
-            // local decision
-
-
-            string longestChildStr = string.Empty;
-            int totalCount = 0;
+            List<char> longest = new List<char>();
 
             foreach (var child in root.Children)
             {
                 path.Push(child.Key);
-
-                var childResult = FindStringDfs(child.Value, path);
-                totalCount += childResult.Count;
-
-                if (longestChildStr.Length < childResult.LongestString.Length)
-                {
-                    longestChildStr = childResult.LongestString;
-                }
-
+                dfs(child.Value, path, ref longest);
                 path.Pop();
             }
 
-            var result = new RepeatedResult()
-            {
-                Count = totalCount
-            };
-
-            if (result.Count > 1)
-            {
-                result.LongestString = GetPath(path);
-            }
-            else
-            {
-                result.LongestString = longestChildStr;
-            };
-
-            return result;
+            return new string(longest.ToArray());
         }
 
-        private static TrieNode BuildTrie(string input)
+        private static void dfs(TrieNode root, Stack<char> path, ref List<char> longest)
         {
-            throw new NotImplementedException();
+            if(root.Children.Count == 1 && root.Children.ContainsKey('$'))
+            {
+                return;
+            }
+
+            if (root.Children.Count >= 2)
+            {
+                if (longest.Count == 0 || path.Count > longest.Count)
+                {
+                    longest = new List<char>(GetString(path));
+                }
+            }
+
+            foreach(var child in root.Children)
+            {
+                path.Push(child.Key);
+                dfs(child.Value, path, ref longest);
+                path.Pop();
+            }
+        }
+
+        private static char[] GetString(Stack<char> path)
+        {
+            var arr = path.ToArray();
+            Array.Reverse(arr);
+            return arr;
+        }
+
+        private static TrieNode BuildTree(string iString)
+        {
+            TrieNode root = new TrieNode();
+            for (int i = iString.Length - 1; i >= 0; i--)
+            {
+                InsertIntoTrie(iString, i, root);
+            }
+            return root;
+        }
+
+        private static void InsertIntoTrie(string iString, int start, TrieNode root)
+        {
+            TrieNode curr = root;
+            for (int i = start; i < iString.Length; i++)
+            {
+                char ch = iString[i];
+                if (!curr.Children.ContainsKey(ch))
+                {
+                    curr.Children.Add(ch, new TrieNode());
+                }
+
+                curr = curr.Children[ch];
+            }
+
+            curr.Children['$'] = new TrieNode();
+        }
+
+        private static string LRS_BruteForce(string iString)
+        {
+            char[] arr = iString.ToCharArray();
+
+            string longestSubstring = string.Empty;
+            int longLength = 0;
+
+            Dictionary<string, int> set = new Dictionary<string, int>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i; j < arr.Length; j++)
+                {
+                    string substring = GetString(arr, i, j);
+                    int length = substring.Length;
+
+                    if (set.ContainsKey(substring))
+                    {
+                        if (length > longLength)
+                        {
+                            longLength = length;
+                            longestSubstring = substring;
+                        }
+
+                        set[substring] = set[substring] + 1;
+                    }
+                    else
+                    {
+                        set[substring] = 1;
+                    }
+                }
+            }
+
+            return longestSubstring;
+        }
+
+        private static string GetString(char[] arr, int start, int end)
+        {
+            return new string(arr, start, end - start + 1);
         }
     }
 }

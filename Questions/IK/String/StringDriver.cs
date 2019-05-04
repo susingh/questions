@@ -12,7 +12,7 @@ namespace Questions.IK.String
         public void Run()
         {
             var sol
-                 // = LongestSubstring.LRS("MISSISSIPPI");
+                 // = LongestRepeatedSubstring.LRS("MISSISSIPPI");
                  //= LongestSubstring.LRS("abcpqrabpqpq");
                  // = PatternMatch.KMP("aaaaaab", "CCCDCCCCCD");
                  // = new PrefixTree();
@@ -20,7 +20,7 @@ namespace Questions.IK.String
                  // = Neuronyms_IK.neuronyms("nailed");
                  // = ShortestSubstringContainingSet.FindSubstring("AYZABOBECODXBANC", new char[] { 'A', 'B', 'C' });
                  // = LongestPalindromeSubstring.FindSubString("abcacdcacdddddddd");
-                 = Atoi.MyAtoi("words and 987");
+                 // = Atoi.MyAtoi("words and 987");
                  //= BoggleSolver.findWords(new string[] { "oath", "pea", "eat", "rain" }, new char[][]
                  //{
                  //    new char[] { 'o', 'a', 'a', 'n' },
@@ -29,6 +29,7 @@ namespace Questions.IK.String
                  //    new char[] { 'i', 'f', 'l', 'v' }
                  //});
                  // = LongestSubstringWith2DistinctChars.getLongestSubstringLengthExactly2DistinctChars("baabcbab");
+                 = PalindromePairs.FindPairs(new string[] { "bat", "tab", "zebra" });
 
             //sol.Add("CAT");
             //sol.Add("DOLL");

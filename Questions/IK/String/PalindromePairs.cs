@@ -14,13 +14,10 @@ namespace Questions.IK.String
     {
         public static List<string> FindPairs(string[] words)
         {
-            TrieNode trie = new TrieNode();
-            TrieNode reversetrie = new TrieNode();
+            TrieNode trie = BuildTrie(words);     // NM
 
             string[] reverseWords = ReverseWords(words); // NM
-
-            BuildTrie(trie, words);     // NM
-            BuildTrie(reversetrie, reverseWords);   // NM
+            TrieNode reversetrie = BuildTrie(reverseWords);   // NM
 
             List<string> pairs = new List<string>();
 
@@ -32,12 +29,39 @@ namespace Questions.IK.String
 
         private static string[] ReverseWords(string[] words)
         {
-            throw new NotImplementedException();
+            var list = new List<string>();
+            foreach (var item in words)
+            {
+                list.Add(new string(item.Reverse().ToArray()));
+            }
+            return list.ToArray();
         }
 
-        private static void BuildTrie(TrieNode root, string[] words)
+        private static TrieNode BuildTrie(string[] words)
         {
+            TrieNode root = new TrieNode();
+            foreach (var word in words)
+            {
+                InsertTrie(root, word);
+            }
+            return root;
+        }
 
+        private static void InsertTrie(TrieNode root, string word)
+        {
+            TrieNode curr = root;
+            int i = 0;
+
+            while (i < word.Length)
+            {
+                if (!curr.Children.ContainsKey(word[i]))
+                    curr.Children[word[i]] = new TrieNode();
+
+                curr = curr.Children[word[i]];
+                i++;
+            }
+
+            curr.isEOW = true;
         }
 
         private static void FindPairs(TrieNode root, string[] words, List<string> result)
@@ -52,14 +76,15 @@ namespace Questions.IK.String
                 }
                 else
                 {
-                    if (index != word.Length - 1)
-                    {
-                        // check if the remaing word is a palindrome
-                    }
-                    else
-                    {
+                    int i = index + 1;
+                    int j = word.Length - 1;
 
+                    while (i < j)
+                    {
+                        if (word[i] != word[j])
+                            return;
                     }
+
 
                 }
             }
@@ -67,13 +92,19 @@ namespace Questions.IK.String
 
         private static int FindMatch(TrieNode trie, string word)
         {
-            return -1;
-        }
+            TrieNode curr = trie;
 
-        private static void Insert (TrieNode root, string word)
-        {
+            int i = 0;
+            while (i < word.Length)
+            {
+                if (!curr.Children.ContainsKey(word[i]))
+                    i--;
 
+                curr = curr.Children[word[i]];
+                i++;
+            }
+
+            return curr.isEOW ? i : -1;
         }
-       
     }
 }
