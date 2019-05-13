@@ -26,18 +26,27 @@ namespace Questions.IK.Graph
             //   });
 
             //= LongestPath.find_longest_path(5, new int[] { 5, 4, 3, 2, 5, 5, 3}, new int[] { 4, 3, 2, 1, 1, 3, 1}, new int[] { 1, 1, 1, 1, 3, 3, 1 }, 5, 1);
-            = GuardDistance.find_shortest_distance_from_a_guard(new char[5, 5]
+//            = GuardDistance.find_shortest_distance_from_a_guard(new char[5, 5]
+//            {
+//                { 'O','O','O','O','G'},
+
+//                {'O','W','W','O','O' },
+
+//{ 'O','O','O','W','O' },
+
+//{ 'G','W','W','W','O'},
+
+//{'O','O','O','O','G' }
+
+//            });
+
+            = Itinerary.FindItinerary(new List<List<string>>
             {
-                { 'O','O','O','O','G'},
-
-                {'O','W','W','O','O' },
-
-{ 'O','O','O','W','O' },
-
-{ 'G','W','W','W','O'},
-
-{'O','O','O','O','G' }
-
+                new List<string>{ "JFK", "SFO" },
+                new List<string>{ "JFK", "ATL" },
+                new List<string>{ "SFO", "ATL" },
+                new List<string>{ "ATL", "JFK" },
+                new List<string>{ "ATL", "SFO" },
             });
         }
     }

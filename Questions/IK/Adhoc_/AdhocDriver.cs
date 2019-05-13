@@ -34,8 +34,8 @@ namespace Questions.IK.Adhoc_
                 //    new int[] { 2, 4 },
                 //    new int[] { 6, 8 },
                 //});
-                // = MinRotatedSortedArray.FindMin(new int[] { 7, 8, 1, 2, 3, 4, 5, 6 });
-                = string.Empty; MoveZeros.MoveZeroes(new int[] { 0, 1, 3, 0, 12 });
+                = MinRotatedSortedArray.FindMin(new int[] { 7, 8, 1, 2, 3, 4, 5, 6 });
+                // = string.Empty; MoveZeros.MoveZeroes(new int[] { 0, 1, 3, 0, 12 });
         }
     }
 }

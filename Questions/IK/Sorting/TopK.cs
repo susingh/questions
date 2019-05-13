@@ -1,10 +1,7 @@
 ﻿using Questions.DataStructures;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Questions.IK.Sorting
 {
@@ -45,17 +42,30 @@ namespace Questions.IK.Sorting
 
         private static void PrintTopK(Stream ip, int k, int magicNumber)
         {
-            MaxHeap<int> heap = new MaxHeap<int>();
+            MinHeap<int> heap = new MinHeap<int>();
             int val;
             while ((val = ip.Next()) != -1)
             {
                 if (val == magicNumber)
                 {
-                    // print the current top k
+                    // print the heap
+                    continue;
                 }
 
-                heap.Add(val);
+                if (heap.Count == k)
+                {
+                    if (heap.Peek() < val)
+                    {
+                        heap.Delete();
+                        heap.Add(val);
+                    }
+                }
+                else
+                {
+                    heap.Add(val);
+                }
             }
         }
+        
     }
 }

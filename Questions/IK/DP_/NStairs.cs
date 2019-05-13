@@ -27,6 +27,50 @@ namespace Questions.IK.DP_
             return ways;
         }
 
+        public static int countWaysToClimbRecurse2(int[] steps, int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+
+            if (n < 0)
+            {
+                return 0;
+            }
+
+            int ways = 0;
+            foreach(var step in steps)
+            {
+                ways += countWaysToClimbRecurse2(steps, n - step);
+            }
+
+            return ways;
+        }
+
+        public static int countWaysToClimbDP2(int[] steps, int n)
+        {
+            int[] dp = new int[n + 1];
+            dp[0] = 1;
+
+            for (int i = 1; i < dp.Length; i++)
+            {
+                int ways = 0;
+                foreach (var step in steps)
+                {
+                    if (i >= step)
+                    {
+                        ways += dp[i - step];
+                    }
+                }
+
+                dp[i] = ways;
+            }
+
+            return dp[n];
+        }
+
+
         public static int countWaysToClimbDP(int[] steps, int n)
         {
             int[] dp = new int[n + 1];

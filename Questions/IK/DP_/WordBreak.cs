@@ -8,34 +8,40 @@ namespace Questions.IK.DP_
 {
     class WordBreak
     {
-        static string[] wordBreak(string strWord, string[] strDict)
+        public static List<string>  solver(List<string> dictionary, string txt)
         {
+            HashSet<string> dict = new HashSet<string>(dictionary);
+
             List<string> result = new List<string>();
-            HashSet<string> dict = new HashSet<string>(strDict);
-            wordBreak(0, strWord, dict, result, string.Empty);
-            return result.ToArray();
+            Stack<string> path = new Stack<string>();
+
+            wordBreak(0, txt, dict, path, result);
+
+            return result;
         }
 
-        static void wordBreak(int i, string strWord, HashSet<string> strDict, List<string> result, string curr)
+        static void wordBreak(int start, string strWord, HashSet<string> strDict, Stack<string> path, List<string> result)
         {
-            if (i >= strWord.Length)
+            if (start == strWord.Length)
             {
-                curr = curr.TrimEnd(' ');
-                result.Add(curr);
+                var list = path.ToList();
+                list.Reverse();
+                result.Add(string.Join(" ", list));
                 return;
             }
 
-            int e = 0;
-            // find the next break
-            while (e < strWord.Length)
+            int i = start;
             {
-                string str = strWord.Substring(i, e - i + 1);
-                if (strDict.Contains(str))
+                for (int j = i; j < strWord.Length; j++)
                 {
-                    curr += str + " ";
+                    string temp = strWord.Substring(i, j - i + 1);
+                    if (strDict.Contains(temp))
+                    {
+                        path.Push(temp);
+                        wordBreak(j + 1, strWord, strDict, path, result);
+                        path.Pop();
+                    }
                 }
-
-                e++;
             }
         }
     }

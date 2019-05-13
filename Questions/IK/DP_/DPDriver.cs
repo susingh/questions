@@ -32,7 +32,16 @@ namespace Questions.IK.DP_
                 // = Robbery.maxStolenValue(new int[] { 1, 6, 4, 5, 9});
                 // = KnightsTour.numPhoneNumbers(1, 2);
                 // = CoinPlay.maxWin(new int[] { 8, 15, 3, 7 });
-                = Knapsack.FindMaxValue(new int[] { 5, 12, 6, 4 }, new int[] { 3, 10, 14, 1 }, 15);
+                // = Knapsack.FindMaxValue(new int[] { 5, 12, 6, 4 }, new int[] { 3, 10, 14, 1 }, 15);
+                // = WordBreak.wordBreak("kickstartisawesome", new string[] { "kick", "start", "is", "awe", "some", "kickstart", "awesome"});
+                // = Levenshtein.levenshteinDistance("kitten", "sitting");
+                = PathsInMatrix.numberOfPaths(new int[][]
+                {
+                    new int [] { 1, 1, 1, 1 },
+                    new int [] { 1, 1, 1, 1 },
+                    new int [] { 1, 1, 1, 1 },
+                    new int [] { 1, 1, 1, 1 }
+                });
         }
     }
 }

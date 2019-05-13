@@ -103,7 +103,8 @@ namespace Questions.IK
                 // = ValidExpression.HasMatchingParantheses("((1+2)*3*)");
                 // = ReverseInGroups.reverse_linked_list_in_groups_of_k(Utils.BuildList(new int[] { 1, 2, 3, 4, 5, 6, 7,8}), 3);
                 // = MergeSortLL.MergeSort(Utils.BuildList(new int[] { 5, 3, 1, 4, 2, 5, 6 }));
-                = Partition.PartitionMain(Utils.BuildList(new int[] { 1, 4, 3, 2, 5, 2}), 3);
+                // = Partition.PartitionMain(Utils.BuildList(new int[] { 1, 4, 3, 2, 5, 2}), 3);
+                = EvaluateExpression.Evaluate("((2 + 3) * 2 / 10)");
         }
     }
 }

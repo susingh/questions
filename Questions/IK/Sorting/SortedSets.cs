@@ -48,6 +48,31 @@ namespace Questions.IK.Sorting
             return i == arr1.Length || j == arr2.Length;
         }
 
+        private static bool IsSubSetMatches(int[] arr1, int[] arr2)
+        {
+            int matches = 0;
+            int i = 0;
+            int j = 0;
+
+            while (i < arr1.Length && j < arr2.Length)
+            {
+                if (arr1[i] == arr2[j])
+                {
+                    j++;
+                    i++;
+                    matches++;
+                }
+                else if (arr1[i] < arr2[j])
+                {
+                    i++;
+                }
+                else
+                    j++;
+            }
+
+            return matches == Math.Min(arr1.Length, arr2.Length);
+        }
+
         /// <summary>
         /// T: O(max(m, n)), S: O(min(m.n))
         /// </summary>

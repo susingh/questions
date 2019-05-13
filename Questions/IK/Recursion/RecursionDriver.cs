@@ -14,7 +14,8 @@
                 //= CountBST.Count_BST(3);
                 // = RoundTotal.RoundTotalMain(new double[] { 0.7, 2.8, 4.9 });
                 // = Encoder.FindEncodingTypes("111");
-                = TestForTie.IsTie(new int[] { 1, 2, 3, 4 });
+                // = TestForTie.IsTie(new int[] { 1, 2, 3, 4 });
+                = RegexMatcher.IsMatch("abcdefg", "a.c.*.*gg*");
         }
     }
 }

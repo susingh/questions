@@ -64,5 +64,57 @@ namespace Questions.IK.Graph
                 }
             }
         }
+
+        List<char> BuildPackages(Dictionary<char, HashSet<char>> graph)
+        {
+            // build in degree
+            Dictionary<char, int> inDegree = BuildInDegree(graph);
+            Queue<char> q = new Queue<char>();
+
+            foreach (var node in graph.Keys)
+            {
+                if (inDegree[node] == 0)
+                {
+                    q.Enqueue(node);
+                }
+            }
+
+            List<char> result = new List<char>();
+            while (q.Count != 0)
+            {
+                char node = q.Dequeue();
+                result.Add(node);
+
+                foreach (var neighbor in graph[node])
+                {
+                    inDegree[neighbor]--;
+                    if (inDegree[neighbor] == 0)
+                    {
+                        q.Enqueue(neighbor);
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        Dictionary<char, int> BuildInDegree(Dictionary<char, HashSet<char>> graph)
+        {
+            Dictionary<char, int> inDegree = new Dictionary<char, int>();
+            foreach (var pair in graph)
+            {
+                inDegree[pair.Key] = 0;
+            }
+
+            foreach (var pair in graph)
+            {
+                foreach (var edge in pair.Value)
+                {
+                    inDegree[edge]++;
+                }
+            }
+
+            return inDegree;
+        }
     }
 }

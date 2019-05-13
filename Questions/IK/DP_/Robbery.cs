@@ -38,6 +38,20 @@ namespace Questions.IK.DP_
             return maxValue;
         }
 
+        private static int maxStolenValueRecursive2(int[] values, int i)
+        {
+            if (i >= values.Length)
+                return 0;
+
+            // take this house
+            int val1 = values[i] + maxStolenValueRecursive2(values, i + 2);
+
+            // skip this house
+            int val2 = maxStolenValueRecursive2(values, i + 1);
+
+            return Math.Max(val1, val2);
+        }
+
         private static int maxStolenValueRecursive(int[] values, int i)
         {
             if (i >= values.Length)
